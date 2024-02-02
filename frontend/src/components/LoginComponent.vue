@@ -1,3 +1,5 @@
 <template>
-  <h1>login tela</h1>
+  <div>
+    <h1>tela de login</h1>
+  </div>
 </template>
