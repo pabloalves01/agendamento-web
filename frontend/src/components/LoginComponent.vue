@@ -98,41 +98,12 @@ export default {
           "http://localhost:8000/api/login",
           payload
         );
-        console.log("response data aqui:", response.data);
+        this.$router.push("/");
         Cookie.set("_myapp_token", response.data.access_token);
       } catch (error) {
         console.error("Error:", error);
       }
     },
-    // const payload = {
-    //   email: this.email,
-    //   password: this.password,
-    // };
-
-    // fetch("http://localhost:3000/api/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Acess: "application/json",
-    //   },
-    //   body: JSON.stringify(payload),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("Success:", data);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //   });
   },
-
-  // autenticated() {
-  //   try {
-  //     const token = await axios.post("/api/login", {
-  //       email: this.email,
-  //       senha: this.senha,
-  //     });
-  //   }
-  // },
 };
 </script>
