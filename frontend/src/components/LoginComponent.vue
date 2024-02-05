@@ -12,6 +12,7 @@
             id="email"
             placeholder="Digite seu email"
             class="bg-white border shadow-sm rounded-md w-full mt-2 px-3.5 w-full py-1.5 mt-2"
+            v-model="email"
           />
         </div>
         <div class="mt-8">
@@ -23,6 +24,7 @@
             id="senha"
             placeholder="Digite sua senha"
             class="bg-white border shadow-sm rounded-md w-full mt-2 px-3.5 w-full py-1.5 mt-2"
+            v-model="password"
           />
         </div>
 
@@ -53,6 +55,7 @@
         <div>
           <button
             class="bg-zinc-900 w-full py-1.5 px-3.5 mt-8 rounded-md shadow-md text-white hover:bg-zinc-800"
+            @click="submit()"
           >
             Entrar
           </button>
@@ -68,3 +71,68 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+import Cookie from "js-cookie";
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+
+  created() {
+    Cookie.remove("_myapp_token");
+  },
+
+  methods: {
+    async submit() {
+      try {
+        const payload = {
+          email: this.email,
+          password: this.password,
+        };
+        const response = await axios.post(
+          "http://localhost:8000/api/login",
+          payload
+        );
+        console.log("response data aqui:", response.data);
+        Cookie.set("_myapp_token", response.data.access_token);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    },
+    // const payload = {
+    //   email: this.email,
+    //   password: this.password,
+    // };
+
+    // fetch("http://localhost:3000/api/login", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Acess: "application/json",
+    //   },
+    //   body: JSON.stringify(payload),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log("Success:", data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
+  },
+
+  // autenticated() {
+  //   try {
+  //     const token = await axios.post("/api/login", {
+  //       email: this.email,
+  //       senha: this.senha,
+  //     });
+  //   }
+  // },
+};
+</script>
