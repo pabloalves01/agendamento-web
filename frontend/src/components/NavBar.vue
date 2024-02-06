@@ -4,7 +4,9 @@
       <div
         class="container mx-auto flex items-center justify-between text-white"
       >
-        <p class="text-3xl font-bold cursor-pointer">Hora do Corte</p>
+        <p class="text-3xl font-bold cursor-pointer">
+          <RouterLink :to="{ name: 'home' }"> Hora do Corte </RouterLink>
+        </p>
         <div class="flex items-end items-center">
           <ul class="flex space-x-4">
             <li>
@@ -38,6 +40,6 @@
 
 <script>
 export default {
-    name: "NavBar",
-    };
+  name: "NavBar",
+};
 </script>
