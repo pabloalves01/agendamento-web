@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ServicosController;
+use App\Http\Controllers\FuncionariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,8 @@ use App\Http\Controllers\AuthController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::get('servicos', [ServicosController::class, 'getServicos']);
+Route::get('funcionarios', [FuncionariosController::class, 'getFuncionarios']);
 
 Route::post('login', [AuthController::class, 'login']);
 
