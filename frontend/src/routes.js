@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LoginComponentVue from "./components/LoginComponent.vue";
 import HomePage from "./components/HomePage.vue";
+import AgendamentoComponent from "./components/AgendamentoComponent.vue";
 import Cookie from "js-cookie";
 
 export const router = new createRouter({
@@ -16,6 +17,11 @@ export const router = new createRouter({
       name: "login",
       component: LoginComponentVue,
     },
+    {
+      path: "/agendamento",
+      name: "agendamento",
+      component: AgendamentoComponent,
+    }
   ],
 });
 
