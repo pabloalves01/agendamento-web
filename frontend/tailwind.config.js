@@ -6,7 +6,11 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'custom': '100rem', 
+      },
+    },
   },
   plugins: [],
 };
