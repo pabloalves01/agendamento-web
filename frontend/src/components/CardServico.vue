@@ -9,7 +9,7 @@
       <div
         v-for="(funcionario, index) in funcionarios"
         :key="index"
-        class="bg-gray-200 py-2.5 px-5 col-span-4 shadow-sm border border-gray-300"
+        class="bg-gray-200 py-2.5 px-5 col-span-4 shadow-sm border border-gray-300 text-center cursor-pointer"
       >
         {{ funcionario.nome_funcionario }}
       </div>
@@ -20,21 +20,6 @@
 <script>
 export default {
   name: "CardServico",
-  // props: {
-  //   nomeCorte: {
-  //     type: String,
-  //     required: true,
-  //   },
-  //   duracao: {
-  //     type: String,
-  //     required: true,
-  //   },
-  //   funcionarios: {
-  //     type: Array,
-  //     required: true,
-  //   },
-  // },
-
   props: [
     "nomeCorte",
     "duracao",
