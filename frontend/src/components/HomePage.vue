@@ -36,13 +36,27 @@
     </nav>
 
     <!-- Conteúdo -->
-    <section id="section-home" class="container mx-auto mt-10 bg-red-500">
-      <h1 class="text-4xl font-bold text-gray-800 mb-4">
-        Bem-vindo a @nome_da_barbearia!
-      </h1>
-      <p class="text-gray-600">
-        O melhor lugar para encontrar o seu corte de cabelo.
-      </p>
+    <section id="section-home" class="container mx-auto my-20">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Bem-vindo a Barbearia Yuri do Corte!
+        </h1>
+        <p class="text-gray-600">
+          O melhor lugar para encontrar o seu corte de cabelo.
+        </p>
+        <div class="mt-10">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg w-full mt-8"
+          >
+            Novo Agendamento
+          </button>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg w-full mt-8"
+          >
+            Meus Agendamentos
+          </button>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -50,7 +64,3 @@
 <script>
 // Seu código JavaScript aqui, se necessário
 </script>
-
-
-
-
