@@ -22,9 +22,9 @@
         <CardServico
           v-for="(servico, index) in servicos"
           :key="index"
-          :nomeCorte="servico.nomeCorte"
-          :duracao="servico.duracao"
-          :funcionarios="servico.funcionarios"
+          :nomeCorte="servico.nome_servico"
+          :duracao="servico.tempo_medio + ' min'"
+          :funcionarios="funcionarios"
         ></CardServico>
       </div>
     </section>
@@ -35,6 +35,7 @@
 import HeaderComponent from "./HeaderComponent.vue";
 import NavBar from "./NavBar.vue";
 import CardServico from "./CardServico.vue";
+import axios from "axios";
 export default {
   name: "AgendamentoComponent",
   components: {
@@ -44,29 +45,31 @@ export default {
   },
   data() {
     return {
+      funcionarios: [],
       servicos: [
         {
-          nomeCorte: "Corte Degradê + Barba",
-          duracao: "30 min",
-          funcionarios: [{ nome: "João" }, { nome: "José" }, { nome: "Maria" }, { nome: "Ana" }, { nome: "Pedro" }],
-        },
-        {
-          nomeCorte: "Corte Degradê + Barba",
-          duracao: "30 min",
-          funcionarios: [{ nome: "João" }, { nome: "José" }, { nome: "Maria" }, { nome: "Ana" }, { nome: "Pedro" }],
-        },
-        {
-          nomeCorte: "Corte Degradê + Barba",
-          duracao: "30 min",
-          funcionarios: [{ nome: "João" }, { nome: "José" }, { nome: "Maria" }, { nome: "Ana" }, { nome: "Pedro" }],
-        },
-        {
-          nomeCorte: "Corte Degradê + Barba",
-          duracao: "30 min",
-          funcionarios: [{ nome: "João" }, { nome: "José" }, { nome: "Maria" }, { nome: "Ana" }, { nome: "Pedro" }],
+          nome_servico: "",
+          tempo_medio: "",
         },
       ],
     };
+  },
+  async created() {
+    await this.getServicos();
+    await this.getFuncionarios();
+  },
+  methods: {
+    async getServicos() {
+      const response = await axios.get("/api/servicos");
+      this.servicos = response.data;
+      console.log("servicos", this.servicos);
+      await this.getFuncionarios();
+    },
+    async getFuncionarios() {
+      const response = await axios.get("/api/funcionarios");
+      this.funcionarios = response.data;
+      console.log("funcionarios aqui", this.funcionarios);
+    },
   },
 };
 </script>
