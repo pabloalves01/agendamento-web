@@ -16,9 +16,10 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::post('login', [AuthController::class, 'login']);
+
 Route::get('senha', function () {
     return bcrypt('admin');
-});
+}); // retorna senha criptografada
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

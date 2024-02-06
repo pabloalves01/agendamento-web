@@ -139,7 +139,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Specify the required claims that must exist in any token.
-    | A TokenInvalidException will be thrown if any of these claims are not
+| A TokenInvalidException will be thrown if any of these claims are not
     | present in the payload.
     |
     */
