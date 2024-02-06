@@ -29,6 +29,7 @@
           </button>
           <button
             class="ml-6 py-2 px-4 text-white bg-pink-500 hover:bg-pink-400 rounded-sm focus:outline-none"
+            @click="this.$router.push('/painel-do-cliente')"
           >
             Portal do Cliente
           </button>

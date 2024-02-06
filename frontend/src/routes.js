@@ -3,6 +3,8 @@ import LoginComponentVue from "./components/LoginComponent.vue";
 import HomePage from "./components/HomePage.vue";
 import AgendamentoComponent from "./components/AgendamentoComponent.vue";
 import MeusAgendamentosComponent from "./components/MeusAgendamentosComponent.vue";
+import PainelCliente from "./components/PainelCliente.vue";
+
 import Cookie from "js-cookie";
 
 export const router = new createRouter({
@@ -28,6 +30,11 @@ export const router = new createRouter({
       name: "meus-agendamentos",
       component: MeusAgendamentosComponent,
     },
+    {
+      path: "/painel-do-cliente",
+      name: "painel-do-cliente",
+      component: PainelCliente,
+    }
   ],
 });
 
