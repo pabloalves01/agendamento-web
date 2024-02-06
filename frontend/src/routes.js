@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginComponentVue from "./components/LoginComponent.vue";
 import HomePage from "./components/HomePage.vue";
 import AgendamentoComponent from "./components/AgendamentoComponent.vue";
+import MeusAgendamentosComponent from "./components/MeusAgendamentosComponent.vue";
 import Cookie from "js-cookie";
 
 export const router = new createRouter({
@@ -21,7 +22,12 @@ export const router = new createRouter({
       path: "/agendamento",
       name: "agendamento",
       component: AgendamentoComponent,
-    }
+    },
+    {
+      path: "/meus-agendamentos",
+      name: "meus-agendamentos",
+      component: MeusAgendamentosComponent,
+    },
   ],
 });
 
