@@ -18,12 +18,14 @@
             @click="this.$router.push('/agendamento')"
           >
             Novo Agendamento
+            <i class="fa-regular fa-clock"></i>
           </button>
           <button
             class="bg-indigo-800 hover:bg-indigo-700 shadow-lg text-white font-bold py-3 px-6 rounded-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg w-full mt-8"
             @click="this.$router.push('/meus-agendamentos')"
           >
             Meus Agendamentos
+            <i class="fa-regular fa-calendar"></i>
           </button>
         </div>
       </div>
