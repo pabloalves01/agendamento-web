@@ -1,7 +1,7 @@
 <template>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50   border">
             <tr >
                 <th  v-for="(field, index) in fields" :key="index" scope="col" class="px-6 py-3">
                     {{ field.label }}
@@ -10,8 +10,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(product, index) in products" :key="index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr v-for="(product, index) in products" :key="index" class="border-b bg-gray-50 hover:bg-gray-200">
+                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-gray-500">
                     {{ product.name }}
                 </th>
                 <td class="px-6 py-4">
@@ -25,7 +25,6 @@
                 </td>
                 <td class="px-6 py-4 text-right">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Excluir</a>
-
                 </td>
                 
             </tr>
@@ -57,7 +56,7 @@ export default {
                 },
                 {
                     name: "Microsoft Surface Pro",
-                    email: "White",
+                    email: "pabloalveszimba@hotmail.com",
                     role: "Laptop PC",
                     value: "100",
 
@@ -65,7 +64,7 @@ export default {
                 },
                 {
                     name: "Magic Mouse 2",
-                    email: "Black",
+                    email: "pabloalveszimba@hotmail.com",
                     role: "Accessories",
                     value: "100",
 
