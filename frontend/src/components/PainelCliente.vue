@@ -17,7 +17,6 @@
 
 
         <div>
-          <FormCadastroFuncionario />
 
           <TableComponent />
         </div>
@@ -27,14 +26,13 @@
 </template>
 
 <script>
-import FormCadastroFuncionario from "./FormCadastroFuncionario.vue";
 import SideNav from "./SideNav.vue";
-import TableComponent from "./TableComponent.vue";
+import FuncionariosPainel from "./FuncionariosPainel.vue";
 export default {
   components: {
     SideNav,
-    TableComponent,
-    FormCadastroFuncionario
+    TableComponent: FuncionariosPainel,
+    
 },
 };
 </script>
