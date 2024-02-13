@@ -3,8 +3,8 @@
     class="bg-white border 6/12 h-auto py-5 px-10 cursor-pointer hover:bg-gray-50"
   >
     <div class="flex flex-row justify-between">
-      <span>{{ nomeCorte }}</span>
-      <span>{{ duracao }}</span>
+      <span class="text-md">{{ nomeCorte }}</span>
+      <span class="text-md">{{ duracao }}</span>
     </div>
     <hr class="my-4" />
     <div id="escolha-funcionario" class="py-2.5 grid grid-cols-12 gap-4">
