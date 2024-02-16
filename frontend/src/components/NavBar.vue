@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="bg-vermelho text-white py-6 z-50">
+    <nav class="bg-vermelho text-white py-5 z-50">
       <div
         class="container mx-auto flex items-center justify-between text-white"
       >

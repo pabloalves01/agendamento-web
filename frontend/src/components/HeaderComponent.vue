@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="bg-cinza text-white py-4">
+    <header class="bg-cinza text-white py-3">
       <div
         class="container mx-auto flex flex-col md:flex-row justify-center items-center text-center md:text-left gap-4"
       >
