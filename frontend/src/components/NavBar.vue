@@ -77,10 +77,10 @@
                 v-else
                 v-for="(produto, index) in produtos"
                 :key="index"
-                class="flex flex-col gap-2 overflow-auto p-4"
+                class="flex flex-col overflow-auto px-4 py-2"
               >
                 <div
-                  class="border border-gray-200 hover:bg-gray-100 grid grid-cols-[auto_1fr] items-center gap-2"
+                  class="border border-gray-200 hover:bg-gray-100 grid grid-cols-[auto_1fr] items-center"
                 >
                   <!-- Foto do Produto -->
                   <div
@@ -143,6 +143,24 @@ export default {
       isButtonCartVisible: false,
       isLogged: true,
       produtos: [
+        {
+          codpro: 1,
+          nome_produto: "Corte Degradê",
+          preco: 35.0,
+          imagem: "url_da_imagem_aqui",
+        },
+        {
+          codpro: 1,
+          nome_produto: "Corte Degradê",
+          preco: 35.0,
+          imagem: "url_da_imagem_aqui",
+        },
+        {
+          codpro: 1,
+          nome_produto: "Corte Degradê",
+          preco: 35.0,
+          imagem: "url_da_imagem_aqui",
+        },
         {
           codpro: 1,
           nome_produto: "Corte Degradê",
