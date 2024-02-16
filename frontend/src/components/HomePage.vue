@@ -2,36 +2,56 @@
   <div class="bg-white h-screen">
     <HeaderComponent></HeaderComponent>
     <NavBar></NavBar>
+    <section class="w-full h-4/6 overflow-hidden">
+      <img
+        src="../assets/images/background-image-site.jpg"
+        class="max-w-full h-auto relative"
+        style="transform: translateY(-25%)"
+        alt="Descrição da
+      imagem"
+      />
+    </section>
 
-    <!-- Conteúdo -->
-    <section id="section-home" class="container mx-auto my-20">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">
-          Bem-vindo a <span class="text-indigo-900">@nome_da_barbearia</span>
-        </h1>
-        <p class="text-gray-600">
-          O melhor lugar para encontrar o seu corte de cabelo.
-        </p>
-        <div class="mt-10">
-          <button
-            class="bg-indigo-800 hover:bg-indigo-700 shadow-lg text-white font-bold py-3 px-6 rounded-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-md w-full mt-8"
-            @click="this.$router.push('/agendamento')"
-          >
-            Novo Agendamento
-            <i class="fa-regular fa-clock"></i>
-          </button>
-          <button
-            class="bg-indigo-800 hover:bg-indigo-700 shadow-lg text-white font-bold py-3 px-6 rounded-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg w-full mt-8"
-            @click="this.$router.push('/meus-agendamentos')"
-          >
-            Meus Agendamentos
-            <i class="fa-regular fa-calendar"></i>
-          </button>
+    <section class="flex items-center justify-center bg-white">
+      <div class="container py-20">
+        <div class="grid grid-cols-2 flex items-center">
+          <div class="col">
+            <span class="font-sm font-light">#AGORAFICOUFACIL</span>
+            <span class="block text-4xl font-semibold mb-2"
+              >Gerencie seus agendamentos</span
+            >
+          </div>
+          <div class="col">
+            <p class="text-sm text-gray-600">
+              Agende facilmente cabeleireiros, quadras esportivas e mais. Nossa
+              plataforma oferece busca rápida, agendamento com poucos cliques e
+              lembretes automáticos, garantindo que você nunca mais perca um
+              compromisso. Tudo isso de forma prática e sem complicações.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="bg-zinc-400 mt-10 h-80 border rounded-sm">
-        GOOGLE MAPS API
+        <div class="grid grid-cols-3 gap-4 my-10 text-white">
+          <div class="bg-cinza">
+            <p class="py-48">Reservas Online</p>
+          </div>
+          <div class="bg-cinza">
+            <p class="py-48">Gestão de Agenda</p>
+          </div>
+          <div class="bg-cinza">
+            <p class="py-48">Lembretes via Whatsapp</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 flex gap-4 text-gray-600">
+          <div class="col">
+            Agendamento simplificado com apenas alguns cliques.
+          </div>
+          <div class="col">
+            Visualize e organize horários e compromissos facilmente.
+          </div>
+          <div class="col">
+            Avise seus clientes com notificações via Whatsapp.
+          </div>
+        </div>
       </div>
     </section>
   </div>

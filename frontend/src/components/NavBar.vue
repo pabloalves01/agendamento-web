@@ -1,38 +1,47 @@
 <template>
   <div>
-    <nav class="bg-indigo-800 border-b shadow-sm text-white py-6">
+    <nav class="bg-vermelho text-white py-6">
       <div
         class="container mx-auto flex items-center justify-between text-white"
       >
         <p class="text-3xl font-bold cursor-pointer">
-          <RouterLink :to="{ name: 'home' }"> Hora do Corte </RouterLink>
+          <RouterLink :to="{ name: 'home' }"> Logo </RouterLink>
         </p>
         <div class="flex items-end items-center">
-          <ul class="flex space-x-4">
+          <ul class="flex space-x-4 text-sm font-medium">
             <li>
-              <a href="#" class="text-md">Planos</a>
+              <a href="#">PLANOS</a>
             </li>
             <li>
-              <a href="#" class="text-md">Suporte</a>
+              <a href="#">SUPORTE</a>
             </li>
             <li>
-              <a href="#" class="text-md">Sobre</a>
+              <a href="#">SOBRE</a>
             </li>
             <li>
-              <a href="#" class="text-md">Contato</a>
+              <a href="#">CONTATO</a>
             </li>
           </ul>
-          <button
-            class="ml-6 py-2 px-4 text-white bg-pink-500 hover:bg-pink-400 rounded-sm focus:outline-none"
+          <div>
+            <button
+              class="mx-4 py-2 px-4 text-white bg-cinza rounded-full focus:outline-none"
+            >
+              <span class="text-sm"> SEJA UM CLIENTE </span>
+            </button>
+            <button
+              class="mr-4 py-2 px-4 text-white bg-cinza rounded-full focus:outline-none"
+              @click="this.$router.push('/painel-do-cliente')"
+            >
+              <span class="text-sm"> PORTAL DO CLIENTE </span>
+            </button>
+          </div>
+
+          <div
+            class="bg-cinza rounded-full w-32 h-10 flex items-center px-4 gap-2 hover:bg-transparent hover:border hover:border-black hover:text-black cursor-pointer transition-all duration-400 border-black"
           >
-            Seja um cliente!
-          </button>
-          <button
-            class="ml-6 py-2 px-4 text-white bg-pink-500 hover:bg-pink-400 rounded-sm focus:outline-none"
-            @click="this.$router.push('/painel-do-cliente')"
-          >
-            Portal do Cliente
-          </button>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">CARRINHO</span>
+          </div>
         </div>
       </div>
     </nav>
