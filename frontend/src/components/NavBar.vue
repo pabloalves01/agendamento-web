@@ -177,6 +177,7 @@ export default {
     toggleModal() {
       if (this.isLogged) {
         this.valor_total = 0;
+        this.valor_produtos = 0;
         this.calculaValorProdutos();
         this.calculaValorTotal();
         this.isCartVisible = !this.isCartVisible;

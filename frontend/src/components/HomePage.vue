@@ -2,14 +2,31 @@
   <div class="bg-white h-screen">
     <HeaderComponent></HeaderComponent>
     <NavBar></NavBar>
-    <section class="w-full h-4/6 overflow-hidden">
+    <section class="w-full h-4/6 overflow-hidden relative">
       <img
         src="../assets/images/background-image-site.jpg"
-        class="max-w-full h-auto relative"
+        class="max-w-full h-auto absolute"
         style="transform: translateY(-25%)"
-        alt="Descrição da
-      imagem"
+        alt="Descrição da imagem"
       />
+      <div
+        class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center"
+      >
+        <div class="container flex flex-col justify-center mx-auto px-4">
+          <p class="text-white font-semibold text-6xl max-w-96">
+            Agende seus compromissos
+          </p>
+          <p class="text-white font-light text-md mt-4">Dê Adeus às Filas e às Esperas. Agende de forma simplificada!</p>
+          <div class="flex flex-row gap-4 mt-4">
+          <button class="bg-vermelho text-white px-4 py-2 rounded-full">
+            AGENDAR AGORA
+          </button>
+          <button class="bg-vermelho text-white px-4 py-2 rounded-full">
+            MEUS AGENDAMENTOS
+          </button>
+        </div>
+        </div>
+      </div>
     </section>
 
     <section class="flex items-center justify-center bg-white">
