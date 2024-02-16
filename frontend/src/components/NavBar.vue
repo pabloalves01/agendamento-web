@@ -5,21 +5,21 @@
         class="container mx-auto flex items-center justify-between text-white"
       >
         <p class="text-3xl font-bold cursor-pointer">
-          <RouterLink :to="{ name: 'home' }"> Hora do Corte </RouterLink>
+          <RouterLink :to="{ name: 'home' }"> Logo </RouterLink>
         </p>
         <div class="flex items-end items-center">
-          <ul class="flex space-x-4">
+          <ul class="flex space-x-4 text-sm font-medium">
             <li>
-              <a href="#" class="text-md">Planos</a>
+              <a href="#">PLANOS</a>
             </li>
             <li>
-              <a href="#" class="text-md">Suporte</a>
+              <a href="#">SUPORTE</a>
             </li>
             <li>
-              <a href="#" class="text-md">Sobre</a>
+              <a href="#">SOBRE</a>
             </li>
             <li>
-              <a href="#" class="text-md">Contato</a>
+              <a href="#">CONTATO</a>
             </li>
           </ul>
           <div>
