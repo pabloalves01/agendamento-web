@@ -49,7 +49,7 @@
           <transition name="slide">
             <div
               v-if="isCartVisible"
-              class="flex flex-col fixed right-0 top-36 w-80 h-auto bg-white shadow-lg z-40"
+              class="flex flex-col fixed right-0 top-36 w-80 h-auto bg-white shadow-2xl z-40"
             >
               <!-- HEADER -->
               <div class="p-4 bg-gray-100 flex-shrink-0">
@@ -107,7 +107,7 @@
                 <div class="mb-4">
                   <div class="flex justify-between mt-2 text-black">
                     <span class="text-sm">Produtos</span>
-                    <span class="text-sm">R$ 0,00</span>
+                    <span class="text-sm">R$ {{ this.valor_produtos }}</span>
                   </div>
                   <div class="flex justify-between my-2 text-black">
                     <span class="text-sm text-green-600">Desconto</span>
@@ -115,7 +115,7 @@
                   </div>
                   <div class="flex justify-between my-2 text-black">
                     <span class="text-sm">Total</span>
-                    <span class="text-sm">R$ 0,00</span>
+                    <span class="text-sm">R$ {{ this.valor_total }}</span>
                   </div>
                 </div>
 
@@ -168,18 +168,35 @@ export default {
           imagem: "url_da_imagem_aqui",
         },
       ],
+      valor_total: 0,
+      valor_produtos: 0,
     };
   },
 
   methods: {
     toggleModal() {
       if (this.isLogged) {
+        this.valor_total = 0;
+        this.calculaValorProdutos();
+        this.calculaValorTotal();
         this.isCartVisible = !this.isCartVisible;
       } else
         this.$router.push({
           name: "login",
           query: { redirect: this.$route.fullPath },
         });
+    },
+
+    calculaValorProdutos() {
+      for (let i = 0; i < this.produtos.length; i++) {
+        this.valor_produtos += this.produtos[i].preco;
+      }
+    },
+
+    calculaValorTotal() {
+      for (let i = 0; i < this.produtos.length; i++) {
+        this.valor_total += this.produtos[i].preco;
+      }
     },
   },
 };
