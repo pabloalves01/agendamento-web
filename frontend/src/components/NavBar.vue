@@ -84,7 +84,7 @@
                 >
                   <!-- Foto do Produto -->
                   <div
-                    class="aspect-square w-20 bg-red-500 flex items-center justify-center overflow-hidden"
+                    class="aspect-square w-20 bg-cinza flex items-center justify-center overflow-hidden"
                   >
                     <img
                       src="url_da_imagem_aqui"
@@ -96,20 +96,31 @@
                   <!-- Detalhes do Produto -->
                   <div class="text-cinza p-2">
                     <p class="text-sm font-bold">{{ produto.nome_produto }}</p>
-                    <p class="text-sm font-semibold">R$ {{ produto.preco }}</p>
+                    <p class="text-sm">R$ {{ produto.preco }}</p>
                   </div>
                 </div>
               </div>
               <!-- FIM DOS PRODUTOS -->
 
               <!-- FOOTER -->
-              <div class="bg-gray-100 mt-auto flex-shrink-0 px-4">
-                <div class="flex justify-between my-4 text-black">
-                  <span class="text-sm">Total</span>
-                  <span class="text-sm">R$ 0,00</span>
+              <div class="bg-gray-100 flex-shrink-0 px-4">
+                <div class="mb-4">
+                  <div class="flex justify-between mt-2 text-black">
+                    <span class="text-sm">Produtos</span>
+                    <span class="text-sm">R$ 0,00</span>
+                  </div>
+                  <div class="flex justify-between my-2 text-black">
+                    <span class="text-sm text-green-600">Desconto</span>
+                    <span class="text-sm text-green-600">R$ 0,00</span>
+                  </div>
+                  <div class="flex justify-between my-2 text-black">
+                    <span class="text-sm">Total</span>
+                    <span class="text-sm">R$ 0,00</span>
+                  </div>
                 </div>
+
                 <button
-                  class="w-full bg-vermelho text-white py-2 rounded-full mb-4"
+                  class="w-full bg-vermelho hover:bg-green-600 text-white py-2 rounded-full mb-4"
                 >
                   Finalizar Compra
                 </button>
@@ -134,8 +145,8 @@ export default {
       produtos: [
         {
           codpro: 1,
-          nome_produto: "Produto Teste",
-          preco: 10.0,
+          nome_produto: "Corte Degradê",
+          preco: 35.0,
           imagem: "url_da_imagem_aqui",
         },
       ],
@@ -144,9 +155,13 @@ export default {
 
   methods: {
     toggleModal() {
-      if (this.isLogged || this.isButtonCartVisible) {
+      if (this.isLogged) {
         this.isCartVisible = !this.isCartVisible;
-      } // ajustar o login
+      } else
+        this.$router.push({
+          name: "login",
+          query: { redirect: this.$route.fullPath },
+        });
     },
   },
 };
