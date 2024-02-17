@@ -119,11 +119,18 @@
                   </div>
                 </div>
 
-                <button
+                <button v-if="produtos.length > 0"
                   class="w-full bg-vermelho hover:bg-green-600 text-white py-2 rounded-full mb-4"
                 >
                   Finalizar Compra
                 </button>
+
+                <button v-else
+                  class="w-full bg-vermelho  text-white py-2 rounded-full mb-4"
+                >
+                  Continuar Comprando
+                </button>
+                
               </div>
               <!-- FIM DO FOOTER -->
             </div>
@@ -143,30 +150,19 @@ export default {
       isButtonCartVisible: false,
       isLogged: true,
       produtos: [
-        {
+      {
           codpro: 1,
-          nome_produto: "Corte Degradê",
+          nome_produto: "Corte Degradê + Barba",
           preco: 35.0,
           imagem: "url_da_imagem_aqui",
         },
         {
           codpro: 1,
-          nome_produto: "Corte Degradê",
-          preco: 35.0,
+          nome_produto: "Sobrancelha",
+          preco: 10.0,
           imagem: "url_da_imagem_aqui",
         },
-        {
-          codpro: 1,
-          nome_produto: "Corte Degradê",
-          preco: 35.0,
-          imagem: "url_da_imagem_aqui",
-        },
-        {
-          codpro: 1,
-          nome_produto: "Corte Degradê",
-          preco: 35.0,
-          imagem: "url_da_imagem_aqui",
-        },
+        
       ],
       valor_total: 0,
       valor_produtos: 0,

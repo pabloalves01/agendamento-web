@@ -19,10 +19,10 @@
           <p class="text-white font-light text-md mt-4">Dê Adeus às Filas e às Esperas. Agende de forma simplificada!</p>
           <div class="flex flex-row gap-4 mt-4">
           <button class="bg-vermelho text-white px-4 py-2 rounded-full" @click="this.$router.push('/agendamento')">
-            AGENDAR AGORA
+            Novo Agendamento
           </button>
           <button class="bg-vermelho text-white px-4 py-2 rounded-full">
-            MEUS AGENDAMENTOS
+            Meus Agendamentos
           </button>
         </div>
         </div>

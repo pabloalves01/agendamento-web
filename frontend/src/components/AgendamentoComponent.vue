@@ -11,10 +11,10 @@
           alt=""
         />
         <div class="flex flex-col">
-          <h1 class="text-4xl font-semibold text-gray-800 mb-4">
+          <h1 class="text-6xl font-semibold text-cinza mb-4">
             Selecione um Serviço
           </h1>
-          <h4>Selecione uma opção e o profissional desejado.</h4>
+          <span>Selecione uma opção e o profissional desejado.</span>
         </div>
       </div>
 
