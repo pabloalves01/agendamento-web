@@ -16,15 +16,20 @@
           <p class="text-white font-semibold text-6xl max-w-96">
             Agende seus compromissos
           </p>
-          <p class="text-white font-light text-md mt-4">Dê Adeus às Filas e às Esperas. Agende de forma simplificada!</p>
+          <p class="text-white font-light text-md mt-4">
+            Dê Adeus às Filas e às Esperas. Agende de forma simplificada!
+          </p>
           <div class="flex flex-row gap-4 mt-4">
-          <button class="bg-vermelho text-white px-4 py-2 rounded-full" @click="this.$router.push('/agendamento')">
-            Novo Agendamento
-          </button>
-          <button class="bg-vermelho text-white px-4 py-2 rounded-full">
-            Meus Agendamentos
-          </button>
-        </div>
+            <button
+              class="bg-vermelho text-white px-4 py-2 rounded-full"
+              @click="this.$router.push('/agendamento')"
+            >
+              Novo Agendamento
+            </button>
+            <button class="bg-vermelho text-white px-4 py-2 rounded-full">
+              Meus Agendamentos
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -71,6 +76,75 @@
         </div>
       </div>
     </section>
+
+    <section class="flex items-center justify-center bg-white">
+  <div class="container py-20 grid grid-cols-4 gap-4">
+    <!-- Feedback 1 -->
+    <div class="col-span-2 py-20 flex flex-row items-center gap-6">
+      <img
+        src="../assets/images/avatar-feedback-01.png"
+        class="rounded-full h-40 w-40 object-cover border"
+        alt=""
+      />
+      <div class="flex flex-col max-w-lg"> <!-- Aqui, adicionei a classe max-w-md -->
+        <span class="text-3xl font-semibold text-cinza">Carlos Silva</span>
+        <span class="text-2xl font-light text-cinza">Empresário</span>
+
+        <span class="mt-2">
+          "A experiência de agendar meu corte de cabelo pelo app foi sensacional! Super prático e consegui escolher o melhor horário sem nenhum estresse. Recomendo demais!"
+        </span>
+      </div>
+    </div>
+
+    <div class="col-span-2 py-20 flex flex-row items-center gap-6">
+      <img
+        src="../assets/images/avatar-feedback-01.png"
+        class="rounded-full h-40 w-40 object-cover border"
+        alt=""
+      />
+      <div class="flex flex-col max-w-lg"> <!-- Aqui, adicionei a classe max-w-md -->
+        <span class="text-3xl font-semibold text-cinza">Marina Gomes</span>
+        <span class="text-2xl font-light text-cinza">Empresária</span>
+
+        <span class="mt-2">
+          "Adorei a facilidade de reservar a quadra para o jogo de fim de semana com a galera. O processo é intuitivo e rápido. Parabéns pela ideia incrível!"
+        </span>
+      </div>
+    </div>
+
+    <div class="col-span-2 py-20 flex flex-row items-center gap-6">
+      <img
+        src="../assets/images/avatar-feedback-01.png"
+        class="rounded-full h-40 w-40 object-cover border"
+        alt=""
+      />
+      <div class="flex flex-col max-w-lg"> <!-- Aqui, adicionei a classe max-w-md -->
+        <span class="text-3xl font-semibold text-cinza">João Pedro Rocha</span>
+        <span class="text-2xl font-light text-cinza">Empresário</span>
+
+        <span class="mt-2">
+          "Fantástico! O sistema de agendamento é muito eficiente e me salvou de perder tempo esperando na fila. Além disso, o atendimento da barbearia que escolhi foi top!"
+        </span>
+      </div>
+    </div>
+
+    <div class="col-span-2 py-20 flex flex-row items-center gap-6">
+      <img
+        src="../assets/images/avatar-feedback-01.png"
+        class="rounded-full h-40 w-40 object-cover border"
+        alt=""
+      />
+      <div class="flex flex-col max-w-lg"> <!-- Aqui, adicionei a classe max-w-md -->
+        <span class="text-3xl font-semibold text-cinza">Letícia Souza</span>
+        <span class="text-2xl font-light text-cinza">Empresária</span>
+        <span class="mt-2">
+          "Usei o app para marcar uma sessão de treino na arena e foi super fácil. Achei ótimo poder ver todos os horários disponíveis e escolher o que melhor se encaixava na minha agenda!"
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
   </div>
 </template>
 
