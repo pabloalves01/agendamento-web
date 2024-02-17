@@ -11,7 +11,7 @@
       <div
         v-for="(funcionario, index) in funcionarios"
         :key="index"
-        class="hover:bg-indigo-800 hover:text-white rounded-md py-2.5 px-5 col-span-4 shadow-sm border border-gray-300 text-left cursor-pointer"
+        class="hover:bg-vermelho hover:text-white rounded-md py-2.5 px-5 col-span-4 shadow-sm border border-gray-300 text-left cursor-pointer"
       >
         <div class="flex flex-row items-center ">
           <i class="fa-regular fa-circle-user mr-2"></i>
