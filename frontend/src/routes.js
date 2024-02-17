@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage.vue";
 import AgendamentoComponent from "./components/AgendamentoComponent.vue";
 import MeusAgendamentosComponent from "./components/MeusAgendamentosComponent.vue";
 import PainelCliente from "./components/PainelCliente.vue";
+import ClientesLista from "./components/ClientesLista.vue";
 
 import Cookie from "js-cookie";
 
@@ -20,6 +21,15 @@ export const router = new createRouter({
       name: "login",
       component: LoginComponentVue,
     },
+    {
+      // eu quero receber os parametros enviados para essa rota
+
+      path: "/clientes",
+      name: "clientes",
+      component: ClientesLista,
+    },
+
+
     {
       path: "/agendamento",
       name: "agendamento",

@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <a
-      href="https://wa.me/5548998529108?text=Olá,%20tenho%20interesse%20em%20agendar%20meus%20horários%20através%20do%20Agendamento%20Web
-"
+      href="https://wa.me/5548998529108?text=Olá,%20tenho%20interesse%20em%20agendar%20meus%20horários%20através%20do%20Agendamento%20Web"
       class="float"
       aria-label="Botão para contato no WhatsApp"
     >

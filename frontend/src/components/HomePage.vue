@@ -22,7 +22,7 @@
           <div class="flex flex-row gap-4 mt-4">
             <button
               class="bg-vermelho text-white px-4 py-2 rounded-full"
-              @click="this.$router.push('/agendamento')"
+              @click="this.$router.push('/clientes')"
             >
               Novo Agendamento
             </button>
@@ -81,7 +81,7 @@
 
 
 <span class="text-6xl font-semibold text-vermelho py-20">Veja o que dizem nossos clientes:</span>      
-  <div class="container grid grid-cols-4 gap-4">
+  <div class="container grid grid-cols-4">
     <!-- Feedback 1 -->
     <div class="col-span-2 py-20 flex flex-row items-center gap-6">
       <img
