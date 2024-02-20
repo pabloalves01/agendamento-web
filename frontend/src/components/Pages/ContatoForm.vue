@@ -3,11 +3,49 @@
     <HeaderComponent />
     <NavBar />
 
-    <section class="flex justify-center py-10">
-      <div class="container bg-red-200 py-10">
-        <div class="grid grid-cols-2">
-          <div class="col bg-green-200 py-10">teste1</div>
-          <div class="col bg-blue-200 py-10">teste1</div>
+    <section class="flex justify-center">
+      <div class="container py-10">
+        <div class="grid grid-cols-1 gap-5">
+          <!-- <div class="col border border-cinza py-10 rounded-sm">
+            <div class="bg-green-200">teste 2</div>
+          </div> -->
+          <div class="col borderpy-10 rounded-sm">
+            <h1 class="text-3xl font-semibold">Formulário de Contato</h1>
+
+            <div class="mt-4">
+              <label for="">Nome Completo:</label>
+              <input
+                type="text"
+                class="border rounded-md w-full p-2"
+                placeholder="Digite seu nome"
+              />
+            </div>
+            <div class="mt-4">
+              <label for="">Email</label>
+              <input
+                type="email"
+                class="border rounded-md w-full p-2"
+                placeholder="Digite seu nome"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="">Email</label>
+              <textarea
+                class="border rounded-md w-full p-2"
+                placeholder="Digite sua mensagem"
+                maxlength="500"
+                rows="8"
+              ></textarea>
+            </div>
+            <div class="mt-4">
+              <button
+                class="bg-vermelho rounded-sm py-2 w-full text-white font-semibold"
+              >
+                ENVIAR
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
