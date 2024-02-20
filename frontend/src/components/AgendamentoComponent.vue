@@ -17,6 +17,10 @@
           <span>Selecione uma opção e o profissional desejado.</span>
         </div>
       </div>
+      <div>
+        <label class="mb-10">Selecione o dia:</label>
+        <VueDatePicker class="mb-4" v-model="date"></VueDatePicker>
+      </div>
 
       <div class="flex flex-wrap gap-5">
         <CardServico

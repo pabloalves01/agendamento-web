@@ -1,22 +1,85 @@
 <template>
   <div
-    class="bg-white border 6/12 h-auto py-5 px-10 cursor-pointer hover:bg-gray-50"
+    class="border border-gray-300 bg-gray-100 px-6 py-4 w-full text-cinza rounded-sm"
   >
-    <div class="flex flex-row justify-between">
-      <span class="text-md">{{ nomeCorte }}</span>
-      <span class="text-md">{{ duracao }}</span>
+    <div class="flex justify-between">
+      <div>
+        <i class="fa-solid fa-scissors mr-2"></i>
+        <span class="font-semibold"> {{ nomeCorte }}</span>
+      </div>
+      <div>
+        <i class="fa-solid fa-clock mr-2"></i>
+        <span> {{ duracao }}</span>
+      </div>
     </div>
     <hr class="my-4" />
-    <div id="escolha-funcionario" class="py-2.5 grid grid-cols-12 gap-4">
+    <div class="flex">
       <div
-        v-for="(funcionario, index) in funcionarios"
-        :key="index"
-        class="hover:bg-vermelho hover:text-white rounded-md py-2.5 px-5 col-span-4 shadow-sm border border-gray-300 text-left cursor-pointer"
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
       >
-        <div class="flex flex-row items-center ">
-          <i class="fa-regular fa-circle-user mr-2"></i>
-          {{ funcionario.nome_funcionario }}
-        </div>
+        Pablo
+      </div>
+    </div>
+    <hr class="my-4" />
+    <div class="mb-2">
+      <span class="font-semibold">Manha</span>
+    </div>
+    <div class="flex gap-2">
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        08:00
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        08:30
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        09:00
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        09:30
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        10:00
+      </div>
+    </div>
+    <hr class="my-4" />
+    <div class="mb-2">
+      <span class="font-semibold">Tarde</span>
+    </div>
+    <div class="flex gap-2">
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        13:00
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        13:30
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        14:00
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        14:30
+      </div>
+      <div
+        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+      >
+        15:00
       </div>
     </div>
   </div>
