@@ -11,7 +11,7 @@
 
         <div class="grid grid-cols-2 py-5 gap-4">
           <div class="col border border-cinza rounded-lg py-8 px-10">
-            <h1 class="text-3xl font-semibold">Resumo do pedido</h1>
+            <h1 class="text-3xl font-semibold text-cinza">Resumo do pedido</h1>
 
             <div class="mt-4 rounded-sm flex justify-between">
               <div>
@@ -44,27 +44,36 @@
             </div>
           </div>
 
-          <div class="col border border-cinza rounded-lg py-8 px-10">
-            <div class="text-right">
-              <h1 class="text-3xl font-semibold">Resumo do pedido</h1>
-
-              <div class="mt-4 rounded-sm flex justify-between">
-                <div>
-                  <h1>Valor Produtos:</h1>
+          <div class="col border border-cinza rounded-lg">
+            <div class="py-8 px-10">
+              <div>
+                <h1 class="text-3xl font-semibold text-cinza">
+                  Total do Pedido
+                </h1>
+                <div class="mt-4 rounded-sm flex justify-between">
+                  <h1>Valor dos Produtos</h1>
+                  <h1>R$ 50.00</h1>
                 </div>
-                <div>R$ 50.00</div>
+                <div class="mt-1 rounded-sm flex justify-between text-gray-400">
+                  <h1>Forma de Pagamento</h1>
+                  <h1>DINHEIRO</h1>
+                </div>
+                <div class="mt-1 rounded-sm flex justify-between">
+                  <h1 class="text-gray-400">Cupom de Desconto</h1>
+                  <h1 class="text-gray-400">CUPOM5OFF</h1>
+                </div>
+                <div
+                  class="mt-1 rounded-sm flex justify-between text-green-500"
+                >
+                  <h1>Desconto Aplicado</h1>
+                  <h1>R$ 00.00</h1>
+                </div>
               </div>
-              <div class="flex justify-between mt-1 text-green-500">
-                <div>Cupom de Desconto:</div>
-                <div class="text-gray-400">#CUPOMDESC10</div>
-              </div>
-              <div class="flex justify-between mt-1 text-green-500">
-                <div>Desconto:</div>
-                <div>R$ 00.00</div>
-              </div>
-              <div class="flex justify-between mt-1">
-                <div class="font-semibold">Total:</div>
-                <div>R$ 50.00</div>
+            </div>
+            <div class="px-10 py-4">
+              <div class="flex justify-between text-cinza">
+                <span class="text-2xl font-semibold">Total a pagar</span>
+                <span class="text-2xl font-semibold">R$ 50.00</span>
               </div>
             </div>
           </div>
