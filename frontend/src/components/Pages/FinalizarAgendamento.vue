@@ -46,11 +46,26 @@
 
           <div class="col border border-cinza rounded-lg py-8 px-10">
             <div class="text-right">
-              <span>Produtos ... R$ 10,00</span>
-              <br />
-              <span>Código Promocional ... R$ 10,00</span>
-              <br />
-              <span>Total ... R$ 20,00</span>
+              <h1 class="text-3xl font-semibold">Resumo do pedido</h1>
+
+              <div class="mt-4 rounded-sm flex justify-between">
+                <div>
+                  <h1>Valor Produtos:</h1>
+                </div>
+                <div>R$ 50.00</div>
+              </div>
+              <div class="flex justify-between mt-1 text-green-500">
+                <div>Cupom de Desconto:</div>
+                <div class="text-gray-400">#CUPOMDESC10</div>
+              </div>
+              <div class="flex justify-between mt-1 text-green-500">
+                <div>Desconto:</div>
+                <div>R$ 00.00</div>
+              </div>
+              <div class="flex justify-between mt-1">
+                <div class="font-semibold">Total:</div>
+                <div>R$ 50.00</div>
+              </div>
             </div>
           </div>
         </div>
