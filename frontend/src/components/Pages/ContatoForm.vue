@@ -25,7 +25,7 @@
               <input
                 type="email"
                 class="border rounded-md w-full p-2"
-                placeholder="Digite seu nome"
+                placeholder="Digite seu email"
               />
             </div>
 
