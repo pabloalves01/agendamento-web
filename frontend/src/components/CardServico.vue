@@ -20,72 +20,78 @@
     </div>
     <hr class="my-4" />
     <div class="flex">
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        Pablo
+      <div @click="toggleDropdown" class="cursor-pointer">
+        <div
+          id="funcionarios-disponiveis"
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          Pablo
+        </div>
       </div>
     </div>
-    <hr class="my-4" />
-    <div class="mb-2">
-      <span class="font-semibold">Manha</span>
-    </div>
-    <div class="flex gap-2">
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        08:00
+
+    <div v-if="showDropdown">
+      <hr class="my-4" />
+      <div class="mb-2">
+        <span class="font-semibold">Manha</span>
       </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        08:30
+      <div class="flex gap-2">
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          08:00
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          08:30
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          09:00
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          09:30
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          10:00
+        </div>
       </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        09:00
+      <hr class="my-4" />
+      <div class="mb-2">
+        <span class="font-semibold">Tarde</span>
       </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        09:30
-      </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        10:00
-      </div>
-    </div>
-    <hr class="my-4" />
-    <div class="mb-2">
-      <span class="font-semibold">Tarde</span>
-    </div>
-    <div class="flex gap-2">
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        13:00
-      </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        13:30
-      </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        14:00
-      </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        14:30
-      </div>
-      <div
-        class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-      >
-        15:00
+      <div class="flex gap-2">
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          13:00
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          13:30
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          14:00
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          14:30
+        </div>
+        <div
+          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
+        >
+          15:00
+        </div>
       </div>
     </div>
   </div>
@@ -101,8 +107,18 @@
 export default {
   name: "CardServico",
   props: ["nomeCorte", "duracao", "funcionarios", "valor"],
+  data() {
+    return {
+      showDropdown: false,
+    };
+  },
   created() {
     console.log("dados", this.funcionarios);
+  },
+  methods: {
+    toggleDropdown() {
+      this.showDropdown = !this.showDropdown;
+    },
   },
 };
 </script>
