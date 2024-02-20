@@ -22,12 +22,13 @@
         <VueDatePicker class="mb-4" v-model="date"></VueDatePicker>
       </div>
 
-      <div class="flex flex-wrap gap-5">
+      <div class="flex flex-wrap">
         <CardServico
           v-for="(servico, index) in servicos"
           :key="index"
           :nomeCorte="servico.nome_servico"
           :duracao="servico.tempo_medio + ' min'"
+          :valor="servico.valor"
           :funcionarios="funcionarios"
         ></CardServico>
       </div>
@@ -54,6 +55,7 @@ export default {
         {
           nome_servico: "",
           tempo_medio: "",
+          valor: "",
         },
       ],
     };
