@@ -27,9 +27,12 @@
           v-for="(servico, index) in servicos"
           :key="index"
           :nomeCorte="servico.nome_servico"
-          :duracao="servico.tempo_medio + ' min'"
+          :duracao="`${servico.tempo_medio} min`"
           :valor="servico.valor"
-          :funcionarios="funcionarios"
+          :funcionarios="
+            funcionarios[0]?.nome_funcionario ||
+            'Nenhum funcionário Disponível.'
+          "
         ></CardServico>
       </div>
     </section>

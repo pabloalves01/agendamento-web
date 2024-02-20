@@ -26,7 +26,7 @@
             id="funcionarios-disponiveis"
             class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
           >
-            Pablo
+            {{ funcionarios }}
           </div>
         </div>
       </div>
