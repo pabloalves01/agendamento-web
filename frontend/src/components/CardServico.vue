@@ -37,29 +37,11 @@
       </div>
       <div class="flex gap-2">
         <div
+          v-for="horarioManha in horariosManha"
+          :key="horarioManha"
           class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
         >
-          08:00
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          08:30
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          09:00
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          09:30
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          10:00
+          {{ horarioManha }}
         </div>
       </div>
       <hr class="my-4" />
@@ -68,35 +50,18 @@
       </div>
       <div class="flex gap-2">
         <div
+          v-for="horarioTarde in horariosTarde"
+          :key="horarioTarde"
           class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
         >
-          13:00
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          13:30
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          14:00
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          14:30
-        </div>
-        <div
-          class="border border-gray-500 py-2 px-2 hover:bg-vermelho hover:text-white rounded-sm"
-        >
-          15:00
+          {{ horarioTarde }}
         </div>
       </div>
     </div>
   </div>
   <div
-    class="bg-cinza hover:bg-green-500 transition duration-300 ease-in-out w-full py-2 flex items-center gap-1 justify-center text-white font-semibold mb-10 rounded-b-sm cursor-pointer"
+    v-if="showDropdown"
+    class="bg-cinza hover:bg-green-500 transition duration-300 ease-in-out w-full py-2 flex items-center gap-1 justify-center text-white font-semibold mb-10 rounded-b-sm cursor-pointer mb-2"
   >
     <i class="fa-solid fa-check"></i>
     <span>AGENDAR HORARIO</span>
@@ -110,6 +75,8 @@ export default {
   data() {
     return {
       showDropdown: false,
+      horariosManha: ["08:00", "08:30", "09:00", "09:30", "10:00"],
+      horariosTarde: ["13:00", "13:30", "14:00", "14:30", "15:00"],
     };
   },
   created() {
