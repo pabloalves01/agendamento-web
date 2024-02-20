@@ -6,6 +6,7 @@ import MeusAgendamentosComponent from "./components/MeusAgendamentosComponent.vu
 import PainelCliente from "./components/PainelCliente.vue";
 import ClientesLista from "./components/ClientesLista.vue";
 import FinalizarAgendamento from "./components/Pages/FinalizarAgendamento.vue";
+import ContatoForm from "./components/Pages/ContatoForm.vue";
 
 import Cookie from "js-cookie";
 
@@ -49,6 +50,11 @@ export const router = new createRouter({
       path: "/finalizar-agendamento",
       name: "finalizar-agendamento",
       component: FinalizarAgendamento,
+    },
+    {
+      path: "/contato",
+      name: "contato",
+      component: ContatoForm,
     },
   ],
 });
