@@ -28,6 +28,11 @@
           >
             {{ funcionarios }}
           </div>
+          <div class="mt-1" v-if="!showDropdown">
+            <span class="text-red-400 text-sm"
+              >*Selecione um funcionário para continuar.</span
+            >
+          </div>
         </div>
       </div>
 
