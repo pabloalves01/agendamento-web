@@ -10,7 +10,7 @@
             <div class="bg-green-200">teste 2</div>
           </div> -->
           <div class="col borderpy-10 rounded-sm">
-            <h1 class="text-3xl font-semibold">Formulário de Contato</h1>
+            <h1 class="text-5xl font-semibold">Formulário de Contato</h1>
 
             <div class="mt-4">
               <label for="">Nome Completo:</label>
