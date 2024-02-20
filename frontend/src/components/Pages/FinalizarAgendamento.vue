@@ -4,15 +4,61 @@
     <NavBar />
 
     <section class="flex justify-center">
-      <div class="container bg-blue-200 py-10">
+      <div class="container py-10">
         <span class="text-5xl font-semibold text-cinza"
           >Finalizar Agendamento</span
         >
 
         <div class="grid grid-cols-2 py-5 gap-4">
-          <div class="col p-10 border border-cinza">teste</div>
-          <div class="col p-10 border border-cinza">teste</div>
+          <div class="col border border-cinza rounded-lg py-8 px-10">
+            <h1 class="text-3xl font-semibold">Resumo do pedido</h1>
+
+            <div class="mt-4 rounded-sm flex justify-between">
+              <div>
+                <h1 class="font-semibold">Corte Degrade</h1>
+              </div>
+              <div>30 min</div>
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div>Profissional:</div>
+              <div>Pablo Alves</div>
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div>Valor:</div>
+              <div>R$ 35.00</div>
+            </div>
+            <hr class="my-4" />
+            <div class="mt-4 rounded-sm flex justify-between">
+              <div>
+                <h1 class="font-semibold">Sobrancelha</h1>
+              </div>
+              <div>10 min</div>
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div>Profissional:</div>
+              <div>Gustavo Keller</div>
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div>Valor:</div>
+              <div>R$ 15.00</div>
+            </div>
+          </div>
+
+          <div class="col border border-cinza rounded-lg py-8 px-10">
+            <div class="text-right">
+              <span>Produtos ... R$ 10,00</span>
+              <br />
+              <span>Código Promocional ... R$ 10,00</span>
+              <br />
+              <span>Total ... R$ 20,00</span>
+            </div>
+          </div>
         </div>
+        <button
+          class="bg-cinza rounded-sm hover:bg-green-500 transition duration-300 ease-in-out w-full py-2 flex items-center gap-1 justify-center text-white font-semibold rounded-b-sm cursor-pointer"
+        >
+          <span>FINALIZAR COMPRA</span>
+        </button>
       </div>
     </section>
   </div>
