@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import HeaderComponent from "./HeaderComponent.vue";
-import NavBar from "./NavBar.vue";
+import HeaderComponent from "./Layout/HeaderComponent.vue";
+import NavBar from "./Layout/NavBar.vue";
 import CardServico from "./CardServico.vue";
 import axios from "axios";
 export default {

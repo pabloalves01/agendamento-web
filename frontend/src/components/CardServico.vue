@@ -65,13 +65,14 @@
         </div>
       </div>
     </div>
-    <div
+    <button
       v-if="showDropdown"
       class="bg-cinza hover:bg-green-500 transition duration-300 ease-in-out w-full py-2 flex items-center gap-1 justify-center text-white font-semibold rounded-b-sm cursor-pointer"
+      @click="this.$router.push('/finalizar-agendamento')"
     >
       <i class="fa-solid fa-check"></i>
       <span>AGENDAR HORARIO</span>
-    </div>
+    </button>
   </div>
 </template>
 

@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LoginComponentVue from "./components/LoginComponent.vue";
-import HomePage from "./components/HomePage.vue";
+import HomePage from "./components/Pages/HomePage.vue";
 import AgendamentoComponent from "./components/AgendamentoComponent.vue";
 import MeusAgendamentosComponent from "./components/MeusAgendamentosComponent.vue";
 import PainelCliente from "./components/PainelCliente.vue";
 import ClientesLista from "./components/ClientesLista.vue";
+import FinalizarAgendamento from "./components/Pages/FinalizarAgendamento.vue";
 
 import Cookie from "js-cookie";
 
@@ -29,7 +30,6 @@ export const router = new createRouter({
       component: ClientesLista,
     },
 
-
     {
       path: "/agendamento",
       name: "agendamento",
@@ -44,7 +44,12 @@ export const router = new createRouter({
       path: "/painel-do-cliente",
       name: "painel-do-cliente",
       component: PainelCliente,
-    }
+    },
+    {
+      path: "/finalizar-agendamento",
+      name: "finalizar-agendamento",
+      component: FinalizarAgendamento,
+    },
   ],
 });
 
