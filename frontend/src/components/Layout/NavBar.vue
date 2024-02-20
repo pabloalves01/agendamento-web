@@ -5,7 +5,7 @@
         class="container mx-auto flex items-center justify-between text-white"
       >
         <p class="text-3xl font-bold cursor-pointer">
-          <RouterLink :to="{ name: 'home' }"> Agenda Horario </RouterLink>
+          <RouterLink :to="{ name: 'home' }"> Agenda Horário </RouterLink>
         </p>
         <div class="flex items-end items-center">
           <ul class="flex space-x-4 text-sm font-medium">
