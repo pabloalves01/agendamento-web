@@ -85,6 +85,19 @@
         </button>
       </div>
     </section>
+
+    <section class="flex justify-center mb-10">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-5">
+          <div class="col border rounded-sm w-full h-96">
+            LOCALIZACAO E NUMERO DO CLIENTE
+          </div>
+          <div class="col border rounded-sm bg-zinc-600 w-full h-96">
+            GOOGLE MAPS API
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
