@@ -89,8 +89,26 @@
     <section class="flex justify-center mb-10">
       <div class="container">
         <div class="grid grid-cols-2 gap-5">
-          <div class="col border rounded-sm w-full h-96">
-            LOCALIZACAO E NUMERO DO CLIENTE
+          <div class="col rounded-sm w-full h-96 py-8 px-10 items-center flex">
+            <div>
+              <div class="mb-4">
+                <h1 class="text-3xl font-semibold text-cinza">
+                  Entre em contato conosco!
+                </h1>
+              </div>
+              <div class="flex gap-2 items-center mb-2">
+                <i class="fa-solid fa-address-book"></i>
+                <span>Rua Joao Manoel Machado - 780 (Nova Brasilia)</span>
+              </div>
+              <div class="flex gap-2 items-center mb-2">
+                <i class="fa-solid fa-envelope"></i>
+                <span>email@email.com.br</span>
+              </div>
+              <div class="flex gap-2 items-center">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>(48) 99852-9108</span>
+              </div>
+            </div>
           </div>
           <div class="col border rounded-sm bg-zinc-600 w-full h-96">
             GOOGLE MAPS API
