@@ -84,7 +84,7 @@ export default {
     buscar() {
       if (this.selectedClientId) {
         this.$router.push({
-          name: "agendamento",
+          name: "agendamentoww",
           params: { id: this.selectedClientId },
         });
         // Supondo que a rota para os detalhes do cliente se chame 'ClientDetails' e espere um 'id' como parâmetro

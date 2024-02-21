@@ -2,7 +2,49 @@
   <div class="bg-white h-screen">
     <HeaderComponent />
     <NavBar />
-    <section class="w-full h-4/6 overflow-hidden relative">
+
+    <section class="w-full">
+      <div class="relative">
+        <img
+          src="/placeholder.svg"
+          alt="Image"
+          class="h-[800px] object-cover w-full"
+        />
+        <div class="inset-0 bg-black backdrop-blur absolute"></div>
+        <div
+          class="container flex flex-col items-center justify-center absolute inset-0 px-4 text-center"
+        >
+          <div>
+            <p
+              class="text-2xl font-semibold tracking-tighter text-gray-100 md:text-4xl/relaxed lg:text-5xl/relaxed xl:text-6xl/relaxed dark:text-gray-100"
+            >
+              Agende seus compromissos
+            </p>
+            <div>
+              <span
+                class="text-sm text-gray-300 md:text-base lg:text-lg xl:text-xl"
+              >
+                Dê Adeus às Filas e às Esperas. Agende de forma simplificada!
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-4 justify-center flex-col min-[400px]:flex-row mt-5">
+            <button
+              class="text-sm bg-white hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+            >
+              Novo Agendamento
+            </button>
+            <button
+              class="text-sm bg-white hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+            >
+              Meus Agendamentos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="w-full h-4/6 overflow-hidden relative">
       <img
         src="../../../public/assets/images/background-image-site.jpg"
         class="max-w-full h-auto absolute"
@@ -32,7 +74,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- <section class="flex items-center justify-center bg-white">
       <div class="container py-20">

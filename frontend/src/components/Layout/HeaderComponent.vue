@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="bg-cinza text-white py-3">
+    <header class="bg-cinza text-white py-2">
       <div
         class="container mx-auto flex flex-col md:flex-row justify-center items-center text-center md:text-left gap-4"
       >
@@ -12,7 +12,11 @@
             conosco!
           </p>
         </div>
-        <button class="bg-vermelho py-2 px-4 rounded-full">Saiba mais</button>
+        <button
+          class="text-sm hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+        >
+          Saiba mais
+        </button>
       </div>
     </header>
   </div>
