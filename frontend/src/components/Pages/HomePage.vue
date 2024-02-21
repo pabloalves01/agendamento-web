@@ -14,13 +14,13 @@
         <div
           class="container flex flex-col items-center justify-center absolute inset-0 px-4 text-center"
         >
-          <div>
+          <div class="text-center flex flex-col items-center justify-center">
             <p
               class="text-2xl font-semibold tracking-tighter text-gray-100 md:text-4xl/relaxed lg:text-5xl/relaxed xl:text-6xl/relaxed dark:text-gray-100"
             >
               Agende seus compromissos
             </p>
-            <div>
+            <div class="max-w-64 md:max-w-full">
               <span
                 class="text-sm text-gray-300 md:text-base lg:text-lg xl:text-xl"
               >
@@ -31,7 +31,8 @@
           <div class="flex gap-4 justify-center flex-col min-[400px]:flex-row mt-5">
             <button
               class="text-sm bg-white hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
-            >
+              @click="this.$router.push('/clientes')"
+              >
               Novo Agendamento
             </button>
             <button
