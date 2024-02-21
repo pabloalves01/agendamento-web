@@ -1,8 +1,5 @@
 <template>
   <div>
-    <HeaderComponent></HeaderComponent>
-    <NavBar></NavBar>
-
     <section class="container mx-auto my-20">
       <div class="mb-10 flex flex-row">
         <img
@@ -40,15 +37,11 @@
 </template>
 
 <script>
-import HeaderComponent from "./Layout/HeaderComponent.vue";
-import NavBar from "./Layout/NavBar.vue";
 import CardServico from "./CardServico.vue";
 import axios from "axios";
 export default {
   name: "AgendamentoComponent",
   components: {
-    NavBar,
-    HeaderComponent,
     CardServico,
   },
   data() {

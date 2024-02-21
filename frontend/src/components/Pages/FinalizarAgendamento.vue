@@ -1,8 +1,5 @@
 <template>
   <div>
-    <HeaderComponent />
-    <NavBar />
-
     <section class="flex justify-center">
       <div class="container py-10">
         <span class="text-5xl font-semibold text-cinza"
@@ -10,7 +7,7 @@
         >
 
         <div class="grid grid-cols-2 py-5 gap-4">
-          <div class="col border border-cinza rounded-lg py-8 px-10">
+          <div class="col border border-gray- rounded-lg py-8 px-10">
             <h1 class="text-3xl font-semibold text-cinza">Resumo do pedido</h1>
 
             <div class="mt-4 rounded-sm flex justify-between">
@@ -120,10 +117,8 @@
 </template>
 
 <script>
-import HeaderComponent from "../Layout/HeaderComponent.vue";
-import NavBar from "../Layout/NavBar.vue";
 export default {
   name: "FinalizarAgendamento",
-  components: { NavBar, HeaderComponent },
+  components: {},
 };
 </script>

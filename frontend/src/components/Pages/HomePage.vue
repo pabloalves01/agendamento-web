@@ -1,7 +1,6 @@
 <template>
   <div class="bg-white h-screen">
-    <HeaderComponent></HeaderComponent>
-    <NavBar></NavBar>
+    <NavBar />
     <section class="w-full h-4/6 overflow-hidden relative">
       <img
         src="../../../public/assets/images/background-image-site.jpg"
@@ -52,7 +51,7 @@
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-4 my-10 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-10 text-white">
           <div class="bg-cinza">
             <p class="py-48">Reservas Online</p>
           </div>
@@ -76,103 +75,13 @@
         </div>
       </div>
     </section>
-
-    <section class="flex flex-col items-center justify-center bg-cinza">
-      <span class="text-6xl font-semibold text-vermelho py-20"
-        >Veja o que dizem nossos clientes:</span
-      >
-      <div class="container grid grid-cols-4">
-        <!-- Feedback 1 -->
-        <div class="col-span-2 py-20 flex flex-row items-center gap-6">
-          <img
-            src="../../../public/assets/images/avatar-feedback-01.png"
-            class="rounded-full h-40 w-40 object-cover border"
-            alt=""
-          />
-          <div class="flex flex-col max-w-lg">
-            <!-- Aqui, adicionei a classe max-w-md -->
-            <span class="text-3xl font-semibold text-white">Carlos Silva</span>
-            <span class="text-2xl font-light text-white">Empresário</span>
-
-            <span class="mt-2 text-white">
-              "A experiência de agendar meu corte de cabelo pelo app foi
-              sensacional! Super prático e consegui escolher o melhor horário
-              sem nenhum estresse. Recomendo demais!"
-            </span>
-          </div>
-        </div>
-
-        <div class="col-span-2 py-20 flex flex-row items-center gap-6">
-          <img
-            src="../../../public/assets/images/avatar-feedback-01.png"
-            class="rounded-full h-40 w-40 object-cover border"
-            alt=""
-          />
-          <div class="flex flex-col max-w-lg">
-            <!-- Aqui, adicionei a classe max-w-md -->
-            <span class="text-3xl font-semibold text-white">Marina Gomes</span>
-            <span class="text-2xl font-light text-white">Empresária</span>
-
-            <span class="mt-2 text-white">
-              "Adorei a facilidade de reservar a quadra para o jogo de fim de
-              semana com a galera. O processo é intuitivo e rápido. Parabéns
-              pela ideia incrível!"
-            </span>
-          </div>
-        </div>
-
-        <div class="col-span-2 py-20 flex flex-row items-center gap-6">
-          <img
-            src="../../../public/assets/images/avatar-feedback-01.png"
-            class="rounded-full h-40 w-40 object-cover border"
-            alt=""
-          />
-          <div class="flex flex-col max-w-lg">
-            <!-- Aqui, adicionei a classe max-w-md -->
-            <span class="text-3xl font-semibold text-white"
-              >João Pedro Rocha</span
-            >
-            <span class="text-2xl font-light text-white">Empresário</span>
-
-            <span class="mt-2 text-white">
-              "Fantástico! O sistema de agendamento é muito eficiente e me
-              salvou de perder tempo esperando na fila. Além disso, o
-              atendimento da barbearia que escolhi foi top!"
-            </span>
-          </div>
-        </div>
-
-        <div class="col-span-2 py-20 flex flex-row items-center gap-6">
-          <img
-            src="../../../public/assets/images/avatar-feedback-01.png"
-            class="rounded-full h-40 w-40 object-cover border"
-            alt=""
-          />
-          <div class="flex flex-col max-w-lg">
-            <!-- Aqui, adicionei a classe max-w-md -->
-            <span class="text-3xl font-semibold text-white">Letícia Souza</span>
-            <span class="text-2xl font-light text-white">Empresária</span>
-            <span class="mt-2 text-white">
-              "Usei o app para marcar uma sessão de treino na arena e foi super
-              fácil. Achei ótimo poder ver todos os horários disponíveis e
-              escolher o que melhor se encaixava na minha agenda!"
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
 <script>
-import HeaderComponent from "../Layout/HeaderComponent.vue";
 import NavBar from "../Layout/NavBar.vue";
-
 export default {
   name: "HomePage",
-  components: {
-    HeaderComponent,
-    NavBar,
-  },
+  components: { NavBar },
 };
 </script>

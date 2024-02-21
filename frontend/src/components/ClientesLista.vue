@@ -1,7 +1,5 @@
 <template>
   <div>
-    <HeaderComponent />
-    <NavBar />
     <section class="flex justify-center bg-cinza">
       <div class="container py-52 flex flex-col">
         <span class="text-6xl font-semibold text-white mb-2"
@@ -32,14 +30,10 @@
 </template>
 
 <script>
-import HeaderComponent from "./Layout/HeaderComponent.vue";
-import NavBar from "./Layout/NavBar.vue";
 import InputSearchCliente from "./InputSearchCliente.vue";
 export default {
   name: "ClientesLista",
   components: {
-    HeaderComponent,
-    NavBar,
     InputSearchCliente,
   },
 };

@@ -1,8 +1,5 @@
 <template>
   <div>
-    <HeaderComponent />
-    <NavBar />
-
     <section class="flex justify-center">
       <div class="container py-10">
         <div class="grid grid-cols-1 gap-5">
@@ -53,11 +50,8 @@
 </template>
 
 <script>
-import HeaderComponent from "../Layout/HeaderComponent.vue";
-import NavBar from "../Layout/NavBar.vue";
-
 export default {
   name: "ContatoForm",
-  components: { HeaderComponent, NavBar },
+  components: {},
 };
 </script>
