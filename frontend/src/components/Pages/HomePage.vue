@@ -1,5 +1,6 @@
 <template>
   <div class="bg-white h-screen">
+    <HeaderComponent />
     <NavBar />
     <section class="w-full h-4/6 overflow-hidden relative">
       <img
@@ -33,7 +34,7 @@
       </div>
     </section>
 
-    <section class="flex items-center justify-center bg-white">
+    <!-- <section class="flex items-center justify-center bg-white">
       <div class="container py-20">
         <div class="grid grid-cols-2 flex items-center">
           <div class="col">
@@ -74,14 +75,15 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
+import HeaderComponent from "../Layout/HeaderComponent.vue";
 import NavBar from "../Layout/NavBar.vue";
 export default {
   name: "HomePage",
-  components: { NavBar },
+  components: { NavBar, HeaderComponent },
 };
 </script>
