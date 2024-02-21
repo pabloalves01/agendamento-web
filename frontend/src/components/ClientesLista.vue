@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="flex justify-center bg-cinza">
+    <HeaderComponent />
+    <NavBar />
+    <section class="flex justify-center bg-black h-[700px]">
       <div class="container py-52 flex flex-col">
         <span class="text-6xl font-semibold text-white mb-2"
           >Hora de Agendar!</span
@@ -30,11 +32,15 @@
 </template>
 
 <script>
+import NavBar from "./Layout/NavBar.vue";
 import InputSearchCliente from "./InputSearchCliente.vue";
+import HeaderComponent from "./Layout/HeaderComponent.vue";
 export default {
   name: "ClientesLista",
   components: {
+    NavBar,
     InputSearchCliente,
-  },
+    HeaderComponent
+},
 };
 </script>

@@ -8,7 +8,7 @@
         <img
           src="/placeholder.svg"
           alt="Image"
-          class="h-[800px] object-cover w-full"
+          class="h-[700px] object-cover w-full"
         />
         <div class="inset-0 bg-black backdrop-blur absolute"></div>
         <div
