@@ -10,7 +10,7 @@
           alt="Image"
           class="h-[700px] object-cover w-full"
         />
-        <div class="inset-0 bg-black backdrop-blur absolute"></div>
+        <div class="inset-0 bg-cinza backdrop-blur absolute"></div>
         <div
           class="container flex flex-col items-center justify-center absolute inset-0 px-4 text-center"
         >
@@ -28,11 +28,13 @@
               </span>
             </div>
           </div>
-          <div class="flex gap-4 justify-center flex-col min-[400px]:flex-row mt-5">
+          <div
+            class="flex gap-4 justify-center flex-col min-[400px]:flex-row mt-5"
+          >
             <button
               class="text-sm bg-white hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
               @click="this.$router.push('/clientes')"
-              >
+            >
               Novo Agendamento
             </button>
             <button

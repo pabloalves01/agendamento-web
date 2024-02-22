@@ -27,20 +27,21 @@
         </a>
       </div>
       <div class="flex items-center">
-        <div class="gap-4 space-x-4 text-sm">
-          <a class="font-semibold" href="#"> Início </a>
-          <a class="text-gray-500 dark:text-gray-400" href="#"> Planos </a>
-          <a class="text-gray-500 dark:text-gray-400" href="#"> Suporte </a>
-          <a class="text-gray-500 dark:text-gray-400" href="#"> Sobre </a>
+        <div class="hidden md:flex space-x-4 text-sm">
+          <a class="font-semibold" href="#">Início</a>
+          <a class="text-gray-500 dark:text-gray-400" href="#">Planos</a>
+          <a class="text-gray-500 dark:text-gray-400" href="#">Suporte</a>
+          <a class="text-gray-500 dark:text-gray-400" href="#">Sobre</a>
         </div>
+
         <button
-          class="ml-4 text-sm hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+          class="mx-4 text-sm hover:bg-gray-200 border border-gray-300 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
           @click="this.$router.push('/painel-do-cliente')"
-          >
+        >
           Painel do Cliente
         </button>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +58,6 @@
             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
-          <span class="sr-only">Toggle user menu</span>
         </button>
       </div>
     </div>
