@@ -17,66 +17,73 @@
 
       <hr class="my-5" />
 
-      <ul class="space-y-8">
-        <li>Agenda</li>
-        <li>Profissionis</li>
-        <li>Comissões</li>
-        <li>Serviços</li>
-        <li>Produtos</li>
-        <li>Clientes</li>
-        <li>Plano</li>
-        <li>Fluxo de Caixa</li>
-        <li>Financeiro</li>
-        <li>Indicadores</li>
-        <li>Notificações</li>
+      <ul>
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200 py-2"
+        >
+          <CalendarCheck :size="22" />Agenda
+        </li>
+        <hr class="my-2" />
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <HandCoins :size="22" />Comissões
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <Contact2 :size="22" />Profissionais
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <Scissors :size="22" />Serviços
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <ShoppingBasket :size="22" />Produtos
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <Handshake :size="22" />Clientes
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <CircleDollarSign :size="22" />Meu Plano
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <Wallet :size="22" />Fluxo de Caixa
+        </li>
+        <hr class="my-2" />
+
+        <li
+          class="flex items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-2"
+        >
+          <Gauge :size="22" />Fluxo de Caixa
+        </li>
+        <hr class="my-2" />
+
         <li><button class="text-red-500">Sair</button></li>
       </ul>
-
-      <!-- Início da Lista de Tópicos com Ícones -->
-      <!-- <ul class="space-y-4">
-        <li class="flex items-center"><i class="icono-agenda"></i> Agenda</li>
-        <li class="flex items-center">
-          <i class="icono-profissionais"></i> Profissionais
-        </li>
-        <li class="flex items-center">
-          <i class="icono-comissoes"></i> Comissões
-        </li>
-        <li class="flex items-center">
-          <i class="icono-servicos"></i> Serviços
-        </li>
-        <li class="flex items-center">
-          <i class="icono-produtos"></i> Produtos
-        </li>
-        <li class="flex items-center">
-          <i class="icono-clientes"></i> Clientes
-        </li>
-        <li class="flex items-center">
-          <i class="icono-meu-plano"></i> Meu Plano
-        </li>
-        <li class="flex items-center">
-          <i class="icono-fluxo-de-caixa"></i> Fluxo de Caixa
-        </li>
-        <li class="flex items-center">
-          <i class="icono-financeiro"></i> Financeiro
-        </li>
-        <li class="flex items-center">
-          <i class="icono-indicadores"></i> Indicadores
-        </li>
-        <li class="flex items-center">
-          <i class="icono-notificacoes"></i> Notificações
-        </li>
-        <li class="flex items-center">
-          <i class="icono-aplicativo"></i> Aplicativo
-        </li>
-        <li class="flex items-center mt-6">
-          <i class="icono-sair"></i> <button class="text-red-500">Sair</button>
-        </li>
-      </ul> -->
-
-      <!-- Fim da Lista de Tópicos com Ícones -->
     </aside>
 
-    <!-- Espaçamento para o conteúdo principal não ficar atrás da barra lateral fixa -->
     <div class="w-80"></div>
 
     <header
@@ -90,12 +97,34 @@
         />
       </div>
     </header>
+    <main class="flex-1">teste</main>
   </div>
 </template>
 
 <script>
+import {
+  CalendarCheck,
+  HandCoins,
+  Contact2,
+  Scissors,
+  ShoppingBasket,
+  Handshake,
+  CircleDollarSign,
+  Wallet,
+  Gauge,
+} from "lucide-vue-next";
 export default {
-  components: {},
+  components: {
+    CalendarCheck,
+    HandCoins,
+    Contact2,
+    Scissors,
+    ShoppingBasket,
+    Handshake,
+    CircleDollarSign,
+    Wallet,
+    Gauge,
+  },
 };
 </script>
 
