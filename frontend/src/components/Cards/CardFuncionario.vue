@@ -21,12 +21,12 @@
       <button
         class="flex items-center gap-2 bg-cinza hover:bg-zinc-800 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg mr-4"
       >
-      <Settings size="20"/>
+      <Settings size="16"/>
         Gerenciar
       </button>
       <button
         class="flex items-center gap-2 bg-red-500 hover:bg-red-600 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg"
-      ><Trash size="20"/>
+      ><Trash size="16"/>
         Excluir
       </button>
     </div>
@@ -54,12 +54,12 @@
       <button
         class="flex items-center gap-2 bg-cinza hover:bg-zinc-800 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg mr-4"
       >
-      <Settings size="20"/>
+      <Settings size="16"/>
         Gerenciar
       </button>
       <button
         class="flex items-center gap-2 bg-red-500 hover:bg-red-600 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg"
-      ><Trash size="20"/>
+      ><Trash size="16"/>
         Excluir
       </button>
     </div>
