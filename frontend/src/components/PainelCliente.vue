@@ -1,8 +1,6 @@
 <template>
   <div class="grid grid-cols-[20%_80%] min-h-screen w-screen">
-    <aside
-      class="bg-white border border-gray-300 h-screen "
-    >
+    <aside class="bg-white border border-gray-300 h-screen">
       <div id="cabecalho" class="flex py-2 px-5">
         <div class="p-2 w-full flex-col">
           <span class="text-base"
@@ -29,7 +27,7 @@
               <CalendarCheck :size="22" />Agenda
             </li>
             <li
-              class="flex px-5  items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-3 text-sm"
+              class="flex px-5 items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-3 text-sm"
             >
               <Scissors :size="22" />Serviços
             </li>
@@ -47,7 +45,7 @@
           </div>
           <hr class="my-2" />
 
-          <div >
+          <div>
             <div class="py-2 px-5">
               <span class="text-sm font-semibold text-cinza"
                 >Administração</span
@@ -90,9 +88,9 @@
       </div>
     </aside>
 
-    <main class="bg-red-200  w-full h-full relative">
+    <main class="w-full h-full relative">
       <header
-        class="flex items-center border border-b-gray-300 w-full bg-white py-5  sticky top-0 left-80  z-50"
+        class="flex items-center border border-b-gray-300 w-full bg-white py-5 sticky top-0 left-80 z-50"
       >
         <div class="px-6 w-full flex flex-row items-center">
           <input
@@ -103,16 +101,27 @@
         </div>
       </header>
 
-      <div class="p-6">
+      <div class="px-6 py-10">
+        <div class="w-full">
+          <div class="flex items-center gap-2 text-xl">
+            <Home class="text-gray-400" :size="22" />
+            <span class="text-gray-400">Home</span>
+            <span class="text-gray-400">/</span>
 
+            <span class="text-gray-400">Funcionarios</span>
+            <span class="text-gray-400">/</span>
 
-        
+            <span class="font-semibold">Cadastro de Funcionarios</span>
+          </div>
+        </div>
+        <div class="py-10"><CardTotais title="Total de Clientes" /></div>
       </div>
     </main>
   </div>
 </template>
 
 <script>
+import CardTotais from "@/components/Cards/CardTotais.vue";
 import {
   CalendarCheck,
   HandCoins,
@@ -123,9 +132,11 @@ import {
   CircleDollarSign,
   Wallet,
   Gauge,
+  Home,
 } from "lucide-vue-next";
 export default {
   components: {
+    CardTotais,
     CalendarCheck,
     HandCoins,
     Contact2,
@@ -135,6 +146,7 @@ export default {
     CircleDollarSign,
     Wallet,
     Gauge,
+    Home,
   },
 };
 </script>
