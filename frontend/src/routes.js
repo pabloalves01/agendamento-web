@@ -7,6 +7,7 @@ import PainelCliente from "./components/PainelCliente.vue";
 import ClientesLista from "./components/ClientesLista.vue";
 import FinalizarAgendamento from "./components/Pages/FinalizarAgendamento.vue";
 import ContatoForm from "./components/Pages/ContatoForm.vue";
+import FuncionariosConteudo from "./components/Layout/FuncionariosConteudo.vue";
 
 import Cookie from "js-cookie";
 
@@ -24,7 +25,6 @@ export const router = new createRouter({
       component: LoginComponentVue,
     },
     {
-      // eu quero receber os parametros enviados para essa rota
 
       path: "/clientes",
       name: "clientes",
@@ -45,6 +45,13 @@ export const router = new createRouter({
       path: "/painel-do-cliente",
       name: "painel-do-cliente",
       component: PainelCliente,
+      children: [
+        {
+          path: "/painel-do-cliente/funcionarios",
+          name: "painel-do-cliente.funcionarios",
+          component: FuncionariosConteudo
+        }
+      ]
     },
     {
       path: "/finalizar-agendamento",
@@ -56,6 +63,7 @@ export const router = new createRouter({
       name: "contato",
       component: ContatoForm,
     },
+    
   ],
 });
 

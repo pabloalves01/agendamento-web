@@ -1,7 +1,6 @@
 <template>
   <div class="bg-gray-50">
     <main class="w-full h-full relative">
-      <HeaderPainelCliente />
 
       <!-- CONTEUDO BREADCRUMS (TRANSFORMAR EM COMPONENTE DEPOIS)-->
       <div class="px-6 py-10">
@@ -73,7 +72,6 @@ import InputNome from "../Inputs/InputNome.vue";
 import InputNumeroTelefone from "../Inputs/InputNumeroTelefone.vue";
 import InputEmail from "../Inputs/InputEmail.vue";
 import CardFuncionario from "../Cards/CardFuncionario.vue";
-import HeaderPainelCliente from "../Layout/HeaderPainelCliente.vue";
 export default {
   name: "ConteudoPainelCliente",
   components: {
@@ -82,7 +80,6 @@ export default {
     InputNumeroTelefone,
     InputEmail,
     CardFuncionario,
-    HeaderPainelCliente,
   },
   data() {
     return {
