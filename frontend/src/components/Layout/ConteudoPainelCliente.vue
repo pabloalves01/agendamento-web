@@ -1,17 +1,7 @@
 <template>
   <div class="bg-gray-50">
     <main class="w-full h-full relative">
-      <header
-        class="flex items-center border border-b-gray-300 w-full bg-white py-5 sticky top-0 left-80 z-50"
-      >
-        <div class="px-6 w-full flex flex-row items-center">
-          <input
-            type="text"
-            class="border border-gray-300 bg-transparent rounded-sm py-2 placeholder-gray-400 w-96 px-4 focus:outline-none focus:ring-2 focus:ring-cinza focus:border-transparent transition-all duration-200 ease-in-out"
-            placeholder="Buscar por cliente, produto, serviço..."
-          />
-        </div>
-      </header>
+      <HeaderPainelCliente />
 
       <!-- CONTEUDO BREADCRUMS (TRANSFORMAR EM COMPONENTE DEPOIS)-->
       <div class="px-6 py-10">
@@ -83,6 +73,7 @@ import InputNome from "../Inputs/InputNome.vue";
 import InputNumeroTelefone from "../Inputs/InputNumeroTelefone.vue";
 import InputEmail from "../Inputs/InputEmail.vue";
 import CardFuncionario from "../Cards/CardFuncionario.vue";
+import HeaderPainelCliente from "../Layout/HeaderPainelCliente.vue";
 export default {
   name: "ConteudoPainelCliente",
   components: {
@@ -91,6 +82,7 @@ export default {
     InputNumeroTelefone,
     InputEmail,
     CardFuncionario,
+    HeaderPainelCliente,
   },
   data() {
     return {
