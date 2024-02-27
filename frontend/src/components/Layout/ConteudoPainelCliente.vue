@@ -35,9 +35,13 @@
         </div>
 
         <div
-          class="border border-gray-300 bg-white rounded-lg p-6 flex flex-col md:flex-wrap mt-10"
+          class="border border-gray-300 bg-white rounded-lg  flex flex-col md:flex-wrap mt-10"
         >
-          <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="border border-gray-300 rounded-t-lg px-6 py-4">
+
+          <span class="font-semibold text-md">Cadastro de Funcionarios</span>
+        </div>
+          <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 p-6 my-4">
             <InputNome
               placeholder="Digite o nome completo"
               label="Nome Completo"
@@ -54,7 +58,10 @@
               :value="telefone"
             />
           </div>
-          <button class="bg-cinza py-2.5 mt-4 w-24 text-white rounded-lg" @click="salvaFuncionario">Cadastrar</button>
+          <div class="border border-gray-300 rounded-b-lg flex items-center px-6 py-4">
+            <button class="bg-cinza py-2.5 w-24 text-white  text-md rounded-lg" @click="salvaFuncionario">Cadastrar</button>
+
+          </div>
         </div>
 
         <div class="mt-10">
