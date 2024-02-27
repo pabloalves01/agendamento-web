@@ -8,6 +8,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
+import Notifications from '@kyvg/vue3-notification'
+
 
 library.add(fas);
 
@@ -21,5 +23,5 @@ window.axios = axios;
 
 const app = createApp(App);
 app.component("VueDatePicker", VueDatePicker);
-
+app.use(Notifications)
 app.use(router).mount("#app");

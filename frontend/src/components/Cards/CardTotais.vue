@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="flex-wrap w-full flex gap-5">
       <div
         v-for="(stat, index) in stats"
         :key="index"
-        class="px-6 py-8 border border-gray-300 rounded-md flex flex-row w-96 items-center gap-4"
+        class="px-6 py-8 border bg-white border-gray-300 rounded-md flex flex-row w-96 items-center gap-4"
       >
         <div><UserRoundCheck size="40" /></div>
         <div class="flex flex-col">
@@ -34,25 +34,22 @@
             value: "999",
           },
           {
-            title: "Total de Serviços",
+            title: "Total de Funcionários",
             value: "999",
           },
           {
-            title: "Total de Produtos",
+            title: "Total de Funcionários",
             value: "999",
           },
           {
-            title: "Total de Vendas",
+            title: "Total de Funcionários",
             value: "999",
           },
-          {
-            title: "Total de Agendamentos",
-            value: "999",
-          },
-          {
-            title: "Total de Faturamento",
-            value: "R$ 999",
-          },
+          
+
+
+
+
         ],
       };
     },

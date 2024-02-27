@@ -88,40 +88,11 @@
       </div>
     </aside>
 
-    <main class="w-full h-full relative">
-      <header
-        class="flex items-center border border-b-gray-300 w-full bg-white py-5 sticky top-0 left-80 z-50"
-      >
-        <div class="px-6 w-full flex flex-row items-center">
-          <input
-            type="text"
-            class="border border-gray-300 bg-transparent rounded-sm py-2 placeholder-gray-400 w-96 px-4 focus:outline-none focus:ring-2 focus:ring-cinza focus:border-transparent transition-all duration-200 ease-in-out"
-            placeholder="Buscar por cliente, produto, serviço..."
-          />
-        </div>
-      </header>
-
-      <div class="px-6 py-10">
-        <div class="w-full">
-          <div class="flex items-center gap-2 text-xl">
-            <Home class="text-gray-400" :size="22" />
-            <span class="text-gray-400">Home</span>
-            <span class="text-gray-400">/</span>
-
-            <span class="text-gray-400">Funcionarios</span>
-            <span class="text-gray-400">/</span>
-
-            <span class="font-semibold">Cadastro de Funcionarios</span>
-          </div>
-        </div>
-        <div class="py-10"><CardTotais title="Total de Clientes" /></div>
-      </div>
-    </main>
+    <ConteudoPainelCliente />
   </div>
 </template>
 
 <script>
-import CardTotais from "@/components/Cards/CardTotais.vue";
 import {
   CalendarCheck,
   HandCoins,
@@ -132,11 +103,10 @@ import {
   CircleDollarSign,
   Wallet,
   Gauge,
-  Home,
 } from "lucide-vue-next";
+import ConteudoPainelCliente from "./Layout/ConteudoPainelCliente.vue";
 export default {
   components: {
-    CardTotais,
     CalendarCheck,
     HandCoins,
     Contact2,
@@ -146,7 +116,7 @@ export default {
     CircleDollarSign,
     Wallet,
     Gauge,
-    Home,
+    ConteudoPainelCliente,
   },
 };
 </script>
