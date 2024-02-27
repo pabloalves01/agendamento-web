@@ -26,6 +26,7 @@
       </button>
       <button
         class="flex items-center gap-2 bg-red-500 hover:bg-red-600 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg"
+        @click="deleteFuncionario"
       ><Trash size="16"/>
         Excluir
       </button>
@@ -46,7 +47,7 @@
           />
         </div>
       </div>
-      <span class="text-cinza font-semibold">Pablo Alves</span>
+      <span class="text-cinza font-semibold">Gustavo Keller</span>
       <!-- <div class="bg-green-600 rounded-lg px-2 text-white">Ativo</div> -->
       <div class="bg-red-500 rounded-lg px-2 text-white">Desativado</div>
     </div>
@@ -59,6 +60,7 @@
       </button>
       <button
         class="flex items-center gap-2 bg-red-500 hover:bg-red-600 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg"
+        @click="deleteFuncionario"
       ><Trash size="16"/>
         Excluir
       </button>
@@ -86,6 +88,13 @@ export default {
         type: "success",
       });
       console.log("teste");
+    },
+    deleteFuncionario() {
+      this.$notify({
+        title: "Sucesso",
+        text: "Funcionário excluído com sucesso!",
+        type: "success",
+      });
     },
   },
 };
