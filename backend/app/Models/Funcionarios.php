@@ -9,5 +9,5 @@ class Funcionarios extends Model
 {
     use HasFactory;
     protected $table = 'barbearia_funcionarios';
-    protected $fillable = ['nome_funcionario', 'funcao'];
+    protected $fillable = ['nome', 'email', 'telefone', 'flag_ativo'];
 }

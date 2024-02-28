@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('barbearia_funcionarios', function (Blueprint $table) {
             $table->id();
-            $table->string('nome_funcionario');
-            $table->string('funcao');
+            $table->string('nome');
+            $table->string('email');
+            $table->string('telefone');
+            $table->tinyInteger('flag_ativo')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
