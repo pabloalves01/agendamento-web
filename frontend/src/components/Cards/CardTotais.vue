@@ -3,7 +3,7 @@
       <div
         v-for="(stat, index) in stats"
         :key="index"
-        class="px-6 py-8 border bg-white border-gray-300 rounded-md flex flex-row w-96 items-center gap-4"
+        class="px-6 py-8 border bg-white border-gray-300 rounded-md flex flex-row w-80  items-center gap-4"
       >
         <div><UserRoundCheck size="40" /></div>
         <div class="flex flex-col">
@@ -37,19 +37,6 @@
             title: "Total de Funcionários",
             value: "999",
           },
-          {
-            title: "Total de Funcionários",
-            value: "999",
-          },
-          {
-            title: "Total de Funcionários",
-            value: "999",
-          },
-          
-
-
-
-
         ],
       };
     },
