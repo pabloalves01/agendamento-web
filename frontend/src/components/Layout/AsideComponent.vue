@@ -25,11 +25,13 @@
             >
               <CalendarCheck :size="22" />Agenda
             </li>
+            <RouterLink :to="{ name: 'painel-do-cliente.servicos'}">
             <li
               class="flex px-5 items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-3 text-sm"
             >
               <Scissors :size="22" />Serviços
             </li>
+          </RouterLink>
             <li
               class="flex px-5 items-center gap-2 cursor-pointer hover:bg-gray-200/50 py-3 text-sm"
             >

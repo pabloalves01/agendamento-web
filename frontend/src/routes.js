@@ -8,6 +8,7 @@ import ClientesLista from "./components/ClientesLista.vue";
 import FinalizarAgendamento from "./components/Pages/FinalizarAgendamento.vue";
 import ContatoForm from "./components/Pages/ContatoForm.vue";
 import FuncionariosConteudo from "./components/Layout/FuncionariosConteudo.vue";
+import ServicosConteudo from "./components/Layout/ServicosConteudo.vue";
 
 import Cookie from "js-cookie";
 
@@ -50,6 +51,11 @@ export const router = new createRouter({
           path: "/painel-do-cliente/funcionarios",
           name: "painel-do-cliente.funcionarios",
           component: FuncionariosConteudo
+        },
+        {
+          path: "/painel-do-cliente/servicos",
+          name: "painel-do-cliente.servicos",
+          component: ServicosConteudo
         }
       ]
     },
