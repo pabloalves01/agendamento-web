@@ -2,7 +2,7 @@
   <div class="grid grid-cols-[20%_80%] min-h-screen w-screen">
     <AsideComponent/>
 
-    <main class="w-full h-full relative">
+    <main class="w-full h-full relative bg-white">
       <HeaderPainelCliente />
       <router-view></router-view>
     </main>

@@ -1,4 +1,3 @@
-import InputNome from '../Inputs/InputNome.vue';
 <template>
   <div class="bg-gray-50">
     <main class="w-full h-full relative">
