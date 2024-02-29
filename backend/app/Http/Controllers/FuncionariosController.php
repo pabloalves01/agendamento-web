@@ -16,9 +16,12 @@ class FuncionariosController extends Controller
     public function cadastroFuncionarios(Request $request)
     {
         $funcionarios = new Funcionarios;
-        $funcionarios->nome_funcionario = $request->nome;
-        $funcionarios->funcao = $request->cargo;
-        $funcionarios->save();
-        return $funcionarios;
+        $funcionarios->fill($request->all());
+
+        if ($funcionarios->save()) {
+            return response()->json(['status' => 'success', 'message' => 'Funcionário cadastrado com sucesso!'], 200);
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Erro ao cadastrar funcionário!'], 400);
+        }
     }
 }
