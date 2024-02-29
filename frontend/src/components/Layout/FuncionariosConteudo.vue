@@ -58,7 +58,7 @@
         </div>
 
         <div class="mt-10">
-          <CardFuncionario />
+          <CardFuncionario ref="card-funcionario" />
         </div>
       </div>
     </main>
@@ -109,6 +109,7 @@ export default {
           text: "Funcionário cadastrado com sucesso!",
           type: "success",
         });
+        await this.$refs["card-funcionario"].getEmployees();
       } catch (error) {
         console.error("Erro ao cadastrar funcionário", error);
         this.$notify({
