@@ -19,6 +19,8 @@ use App\Http\Controllers\FuncionariosController;
 Route::get('servicos', [ServicosController::class, 'getServicos']);
 Route::get('funcionarios', [FuncionariosController::class, 'getFuncionarios']);
 Route::post('cadastro-funcionarios', [FuncionariosController::class, 'cadastroFuncionarios']);
+Route::post('funcionarios-edit/{id}', [FuncionariosController::class, 'editFuncionario']);
+Route::delete('funcionarios-delete/{id}', [FuncionariosController::class, 'deleteFuncionario']);
 
 Route::post('login', [AuthController::class, 'login']);
 

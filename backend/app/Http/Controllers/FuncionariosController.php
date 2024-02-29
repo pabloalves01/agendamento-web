@@ -24,4 +24,16 @@ class FuncionariosController extends Controller
             return response()->json(['status' => 'error', 'message' => 'Erro ao cadastrar funcionário!'], 400);
         }
     }
+
+    public function deleteFuncionario(Funcionarios $id)
+    {
+        $id->delete();
+    }
+
+    public function editFuncionario(Request $request)
+    {
+        dd($request);
+        $funcionario = $request->all();
+        dd($funcionario);
+    }
 }

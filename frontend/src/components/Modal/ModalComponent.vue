@@ -12,7 +12,7 @@
       <div class="px-6 py-2">
         <button
           class="close-button bg-cinza text-white py-2 px-4 rounded-lg"
-          @click="closeModal"
+          @click="emitAction"
         >
           Salvar
         </button>
@@ -37,6 +37,9 @@ export default {
     closeModal() {
       this.$emit("update:isVisible", false);
     },
+    emitAction() {
+      this.$emit('action');
+    }
   },
 };
 </script>

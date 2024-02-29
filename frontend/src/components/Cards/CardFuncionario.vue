@@ -62,14 +62,12 @@
     :isVisible="isModalVisible"
     title="Editar funcionário"
     @update:isVisible="isModalVisible = $event"
+    @action="editFuncionario()"
   >
     <div class="flex gap-4">
       <InputNome label="Nome" placeholder="Digite o nome" />
       <InputEmail label="Email" placeholder="Digite o e-email" />
-      <InputNumeroTelefone
-        label="Telefone"
-        placeholder="Digite o telefone"
-      />
+      <InputNumeroTelefone label="Telefone" placeholder="Digite o telefone" />
     </div>
   </ModalComponent>
 </template>
@@ -92,8 +90,8 @@ export default {
     ModalComponent,
     InputNome,
     InputEmail,
-    InputNumeroTelefone
-},
+    InputNumeroTelefone,
+  },
   data() {
     return {
       funcionarios: [],
@@ -114,27 +112,48 @@ export default {
         console.error(error);
       }
     },
-    teste() {
-      this.$notify({
-        title: "Important message",
-        text: "Hello user!",
-        type: "success",
-      });
-      console.log("teste");
-    },
+
     openModal() {
       this.isModalVisible = true;
     },
-    async deleteFuncionario(id) {
-      console.log("Funcionário excluído com sucesso!", id);
-      this.$notify({
-        title: "Sucesso",
-        text: "Funcionário excluído com sucesso!",
-        type: "success",
-      });
+
+    editFuncionario(id) {
+      try {
+        axios.post("api/funcionarios-edit");
+        this.$notify({
+          title: "Sucesso",
+          text: "Funcionário editado com sucesso!",
+          type: "success",
+        });
+      } catch (error) {
+        this.$notify({
+          title: "Erro",
+          text: "Não foi possível editar o funcionário.",
+          type: "error",
+        });
+        console.error(error);
+      }
+    },
+
+    deleteFuncionario(id) {
+      try {
+        axios.delete(`api/funcionarios-delete/${id}`);
+        this.$notify({
+          title: "Sucesso",
+          text: "Funcionário excluído com sucesso!",
+          type: "success",
+        });
+      } catch (error) {
+        this.$notify({
+          title: "Erro",
+          text: "Erro ao excluir funcionário!",
+          type: "error",
+        });
+        console.error(error);
+      }
 
       this.funcionarios = this.funcionarios.splice(id, 1);
-      await this.getEmployees();
+      this.getEmployees();
     },
   },
 };
