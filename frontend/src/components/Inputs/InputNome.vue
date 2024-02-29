@@ -11,7 +11,8 @@
         type="text"
         class="pl-8 bg-white w-full border border-gray-300 p-2.5 text-gray-900 text-sm rounded-lg focus:ring-cinza focus:border-transparent transition-all duration-200 ease-in-out"
         :placeholder="placeholder"
-        :v-model="value"
+        :value="nome"
+        @input="$emit('update:nome', $event.target.value)"
       />
     </div>
   </div>
@@ -22,11 +23,6 @@ import { SquareUserRound } from "lucide-vue-next";
 
 export default {
   name: "InputNome",
-  data() {
-    return {
-      nome: "",
-    };
-  },
   components: {
     SquareUserRound,
   },
@@ -39,7 +35,7 @@ export default {
       type: String,
       required: true,
     },
-    value: {
+    nome: {
       type: String,
       required: true,
     },

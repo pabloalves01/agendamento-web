@@ -1,7 +1,6 @@
 <template>
   <div class="bg-gray-50">
     <main class="w-full h-full relative">
-
       <!-- CONTEUDO BREADCRUMS (TRANSFORMAR EM COMPONENTE DEPOIS)-->
       <div class="px-6 py-10">
         <div class="w-full">
@@ -33,17 +32,17 @@
             <InputNome
               placeholder="Digite o nome completo"
               label="Nome Completo"
-              :value="nome"
+              v-model:nome="nome"
             />
             <InputEmail
               placeholder="Digite o e-mail"
               label="E-mail"
-              :value="email"
+              v-model:email="email"
             />
             <InputNumeroTelefone
               placeholder="Digite o número de telefone"
               label="Telefone"
-              :value="telefone"
+              v-model:telefone="telefone"
             />
           </div>
           <div
@@ -72,6 +71,7 @@ import InputNome from "../Inputs/InputNome.vue";
 import InputNumeroTelefone from "../Inputs/InputNumeroTelefone.vue";
 import InputEmail from "../Inputs/InputEmail.vue";
 import CardFuncionario from "../Cards/CardFuncionario.vue";
+import axios from "axios";
 export default {
   name: "ConteudoPainelCliente",
   components: {
@@ -84,15 +84,39 @@ export default {
   data() {
     return {
       nome: "",
+      email: "",
+      telefone: "",
     };
   },
   methods: {
-    salvaFuncionario() {
-      this.$notify({
-        title: "Sucesso",
-        text: "Funcionário cadastrado com sucesso!",
-        type: "success",
-      });
+    async salvaFuncionario() {
+      console.log(
+        "Funcionário cadastrado com sucesso!",
+        this.nome,
+        this.email,
+        this.telefone
+      );
+
+      try {
+        await axios.post("/api/cadastro-funcionarios", {
+          nome: this.nome,
+          email: this.email,
+          telefone: this.telefone,
+        });
+
+        this.$notify({
+          title: "Sucesso",
+          text: "Funcionário cadastrado com sucesso!",
+          type: "success",
+        });
+      } catch (error) {
+        console.error("Erro ao cadastrar funcionário", error);
+        this.$notify({
+          title: "Erro",
+          text: error.message || "Erro ao cadastrar funcionário",
+          type: "error",
+        });
+      }
     },
   },
 };
