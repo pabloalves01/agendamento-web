@@ -1,40 +1,7 @@
 <template>
   <div
-    class="flex bg-white border border-gray-300 w-full rounded-lg justify-between p-5 mt-2.5"
-  >
-    <div class="flex items-center gap-4">
-      <div class="text-cinza"><CircleUser /></div>
-      <div class="rounded-full bg-cinza h-10 w-10">
-        <div class="rounded-full bg-cinza h-10 w-10">
-          <img
-            src="../../../public/assets/images/galo-cego.jpg"
-            class="rounded-full w-full h-full"
-            alt=""
-          />
-        </div>
-      </div>
-      <span class="text-cinza font-semibold">Pablo Alves</span>
-      <div class="bg-green-600 rounded-lg px-2 text-white">Ativo</div>
-      <!-- <div class="bg-red-500 rounded-lg px-2 text-white">Desativado</div> -->
-    </div>
-    <div class="flex items-center">
-      <button
-        class="flex items-center gap-2 bg-cinza hover:bg-zinc-800 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg mr-4"
-      >
-        <Settings size="16" />
-        Gerenciar
-      </button>
-      <button
-        class="flex items-center gap-2 bg-red-500 hover:bg-red-600 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg"
-        @click="deleteFuncionario"
-      >
-        <Trash size="16" />
-        Excluir
-      </button>
-    </div>
-  </div>
-
-  <div
+    v-for="(funcionario, index) in funcionarios"
+    :key="index"
     class="flex bg-white border border-gray-300 w-full rounded-lg justify-between p-5 mt-2.5"
   >
     <div class="flex items-center gap-4">
@@ -48,9 +15,15 @@
           />
         </div>
       </div>
-      <span class="text-cinza font-semibold">Gustavo Keller</span>
+      <span class="text-cinza font-semibold">{{ funcionario.nome }}</span>
       <!-- <div class="bg-green-600 rounded-lg px-2 text-white">Ativo</div> -->
-      <div class="bg-red-500 rounded-lg px-2 text-white">Desativado</div>
+      <div
+        v-if="funcionario.flag_ativo == 0"
+        class="bg-red-500 rounded-lg px-2 text-white"
+      >
+        Desativado
+      </div>
+      <div v-else class="bg-green-600 rounded-lg px-2 text-white">Ativo</div>
     </div>
     <div class="flex items-center">
       <button
@@ -61,7 +34,7 @@
       </button>
       <button
         class="flex items-center gap-2 bg-red-500 hover:bg-red-600 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg"
-        @click="deleteFuncionario"
+        @click="deleteFuncionario(funcionario.id)"
       >
         <Trash size="16" />
         Excluir
@@ -72,6 +45,7 @@
 
 <script>
 import { CircleUser, Trash, Settings } from "lucide-vue-next";
+import axios from "axios";
 
 export default {
   name: "CardFuncionario",
@@ -80,7 +54,24 @@ export default {
     Trash,
     Settings,
   },
+  data() {
+    return {
+      funcionarios: [],
+    };
+  },
+  created() {
+    this.getEmployees();
+  },
   methods: {
+    async getEmployees() {
+      try {
+        const response = await axios.get("api/funcionarios");
+        console.log(response.data);
+        this.funcionarios = response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
     teste() {
       this.$notify({
         title: "Important message",
@@ -89,12 +80,16 @@ export default {
       });
       console.log("teste");
     },
-    deleteFuncionario() {
+    async deleteFuncionario(id) {
+      console.log("Funcionário excluído com sucesso!", id);
       this.$notify({
         title: "Sucesso",
         text: "Funcionário excluído com sucesso!",
         type: "success",
       });
+
+      this.funcionarios = this.funcionarios.splice(id, 1);
+      await this.getEmployees();
     },
   },
 };
