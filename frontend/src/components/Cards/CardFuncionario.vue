@@ -29,6 +29,7 @@
       <div class="flex items-center">
         <button
           class="flex items-center gap-2 bg-cinza hover:bg-zinc-800 transition-all duration-200 ease-in-out text-white px-4 py-2 rounded-lg mr-4"
+          @click="openModal"
         >
           <Settings size="16" />
           Gerenciar
@@ -44,21 +45,42 @@
     </div>
   </div>
 
-  <div v-else class=" py-10">
+  <div v-else class="py-10">
     <div class="flex justify-center items-center">
-      <div class="flex flex-col text-center md:flex-row text-gray-500 items-center gap-4">
+      <div
+        class="flex flex-col text-center md:flex-row text-gray-500 items-center gap-4"
+      >
         <UserRoundX size="64" />
-        <span class=" font-semibold text-3xl"
+        <span class="font-semibold text-3xl"
           >Nenhum funcionário cadastrado.</span
         >
       </div>
     </div>
   </div>
+
+  <ModalComponent
+    :isVisible="isModalVisible"
+    title="Editar funcionário"
+    @update:isVisible="isModalVisible = $event"
+  >
+    <div class="flex gap-4">
+      <InputNome label="Nome" placeholder="Digite o nome" />
+      <InputEmail label="Email" placeholder="Digite o e-email" />
+      <InputNumeroTelefone
+        label="Telefone"
+        placeholder="Digite o telefone"
+      />
+    </div>
+  </ModalComponent>
 </template>
 
 <script>
+import ModalComponent from "../Modal/ModalComponent.vue";
 import { CircleUser, Trash, Settings, UserRoundX } from "lucide-vue-next";
 import axios from "axios";
+import InputNome from "../Inputs/InputNome.vue";
+import InputEmail from "../Inputs/InputEmail.vue";
+import InputNumeroTelefone from "../Inputs/InputNumeroTelefone.vue";
 
 export default {
   name: "CardFuncionario",
@@ -67,10 +89,15 @@ export default {
     Trash,
     Settings,
     UserRoundX,
-  },
+    ModalComponent,
+    InputNome,
+    InputEmail,
+    InputNumeroTelefone
+},
   data() {
     return {
       funcionarios: [],
+      isModalVisible: false,
     };
   },
   created() {
@@ -94,6 +121,9 @@ export default {
         type: "success",
       });
       console.log("teste");
+    },
+    openModal() {
+      this.isModalVisible = true;
     },
     async deleteFuncionario(id) {
       console.log("Funcionário excluído com sucesso!", id);
