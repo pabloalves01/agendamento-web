@@ -117,23 +117,23 @@ export default {
       this.isModalVisible = true;
     },
 
-    editFuncionario(id) {
-      try {
-        axios.post("api/funcionarios-edit");
-        this.$notify({
-          title: "Sucesso",
-          text: "Funcionário editado com sucesso!",
-          type: "success",
-        });
-      } catch (error) {
-        this.$notify({
-          title: "Erro",
-          text: "Não foi possível editar o funcionário.",
-          type: "error",
-        });
-        console.error(error);
-      }
-    },
+    // editFuncionario(id) {
+    //  try {
+    //    axios.post("api/funcionarios-edit");
+    //    this.$notify({
+    //      title: "Sucesso",
+    //      text: "Funcionário editado com sucesso!",
+    //      type: "success",
+    //    });
+    //  } catch (error) {
+    //    this.$notify({
+    //      title: "Erro",
+    //      text: "Não foi possível editar o funcionário.",
+    //      type: "error",
+    //    });
+    //    console.error(error);
+    //  }
+    // },
 
     deleteFuncionario(id) {
       try {
