@@ -1,73 +1,34 @@
 <template>
-  <div class="bg-slat-100 flex items-center justify-center h-screen w-full">
-    <div class="bg-white h-auto w-2/6 rounded-lg shadow-md">
-      <div class="p-20 py-14">
-        <p class="font-bold">Login</p>
-        <div class="mt-8">
-          <label for="email" class="block text-sm font-bold text-gray-700"
-            >Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Digite seu email"
-            class="bg-white border shadow-sm rounded-md w-full mt-2 px-3.5 w-full py-1.5 mt-2"
-            v-model="email"
-          />
-        </div>
-        <div class="mt-8">
-          <label for="email" class="block text-sm font-bold text-gray-700"
-            >Senha
-          </label>
-          <input
-            type="password"
-            id="senha"
-            placeholder="Digite sua senha"
-            class="bg-white border shadow-sm rounded-md w-full mt-2 px-3.5 w-full py-1.5 mt-2"
-            v-model="password"
-          />
-        </div>
+  <div class="bg-zinc-900 h-screen w-full flex justify-center items-center">
+    <div class="border border-zinc-800 rounded-md w-[440px]">
+      <form @submit.prevent="submit">
+        <div class="flex justify-center py-6 rounded-t-lg">
+          <svg height="22" viewBox="0 0 261 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.405 33.06C0.405 29.3767 1.14167 26.1483 2.615 23.375C4.13167 20.5583 6.21167 18.3917 8.855 16.875C11.4983 15.3583 14.5317 14.6 17.955 14.6C22.2883 14.6 25.8633 15.64 28.68 17.72C31.54 19.7567 33.4683 22.6817 34.465 26.495H26.47C25.82 24.7183 24.78 23.3317 23.35 22.335C21.92 21.3383 20.1217 20.84 17.955 20.84C14.9217 20.84 12.495 21.9233 10.675 24.09C8.89833 26.2133 8.01 29.2033 8.01 33.06C8.01 36.9167 8.89833 39.9283 10.675 42.095C12.495 44.2617 14.9217 45.345 17.955 45.345C22.245 45.345 25.0833 43.46 26.47 39.69H34.465C33.425 43.33 31.475 46.2333 28.615 48.4C25.755 50.5233 22.2017 51.585 17.955 51.585C14.5317 51.585 11.4983 50.8267 8.855 49.31C6.21167 47.75 4.13167 45.5833 2.615 42.81C1.14167 39.9933 0.405 36.7433 0.405 33.06ZM56.0196 33.125L72.5296 51H62.5196L49.2596 35.595V51H41.8496V2.9H49.2596V30.85L62.2596 15.185H72.5296L56.0196 33.125ZM85.2508 20.385C86.3342 18.565 87.7642 17.1567 89.5408 16.16C91.3608 15.12 93.5058 14.6 95.9758 14.6V22.27H94.0908C91.1875 22.27 88.9775 23.0067 87.4608 24.48C85.9875 25.9533 85.2508 28.51 85.2508 32.15V51H77.8408V15.185H85.2508V20.385ZM135.612 32.215C135.612 33.5583 135.525 34.7717 135.352 35.855H107.987C108.204 38.715 109.265 41.0117 111.172 42.745C113.079 44.4783 115.419 45.345 118.192 45.345C122.179 45.345 124.995 43.6767 126.642 40.34H134.637C133.554 43.6333 131.582 46.3417 128.722 48.465C125.905 50.545 122.395 51.585 118.192 51.585C114.769 51.585 111.692 50.8267 108.962 49.31C106.275 47.75 104.152 45.5833 102.592 42.81C101.075 39.9933 100.317 36.7433 100.317 33.06C100.317 29.3767 101.054 26.1483 102.527 23.375C104.044 20.5583 106.145 18.3917 108.832 16.875C111.562 15.3583 114.682 14.6 118.192 14.6C121.572 14.6 124.584 15.3367 127.227 16.81C129.87 18.2833 131.929 20.3633 133.402 23.05C134.875 25.6933 135.612 28.7483 135.612 32.215ZM127.877 29.875C127.834 27.145 126.859 24.9567 124.952 23.31C123.045 21.6633 120.684 20.84 117.867 20.84C115.31 20.84 113.122 21.6633 111.302 23.31C109.482 24.9133 108.399 27.1017 108.052 29.875H127.877ZM140.434 32.93C140.434 29.3333 141.171 26.1483 142.644 23.375C144.161 20.6017 146.198 18.4567 148.754 16.94C151.354 15.38 154.214 14.6 157.334 14.6C160.151 14.6 162.599 15.1633 164.679 16.29C166.803 17.3733 168.493 18.7383 169.749 20.385V15.185H177.224V51H169.749V45.67C168.493 47.36 166.781 48.7683 164.614 49.895C162.448 51.0217 159.978 51.585 157.204 51.585C154.128 51.585 151.311 50.805 148.754 49.245C146.198 47.6417 144.161 45.4317 142.644 42.615C141.171 39.755 140.434 36.5267 140.434 32.93ZM169.749 33.06C169.749 30.59 169.229 28.445 168.189 26.625C167.193 24.805 165.871 23.4183 164.224 22.465C162.578 21.5117 160.801 21.035 158.894 21.035C156.988 21.035 155.211 21.5117 153.564 22.465C151.918 23.375 150.574 24.74 149.534 26.56C148.538 28.3367 148.039 30.46 148.039 32.93C148.039 35.4 148.538 37.5667 149.534 39.43C150.574 41.2933 151.918 42.7233 153.564 43.72C155.254 44.6733 157.031 45.15 158.894 45.15C160.801 45.15 162.578 44.6733 164.224 43.72C165.871 42.7667 167.193 41.38 168.189 39.56C169.229 37.6967 169.749 35.53 169.749 33.06ZM195.602 21.23V41.055C195.602 42.3983 195.905 43.3733 196.512 43.98C197.162 44.5433 198.245 44.825 199.762 44.825H204.312V51H198.462C195.125 51 192.569 50.22 190.792 48.66C189.015 47.1 188.127 44.565 188.127 41.055V21.23H183.902V15.185H188.127V6.28H195.602V15.185H204.312V21.23H195.602ZM214.912 10.44C213.568 10.44 212.442 9.985 211.532 9.075C210.622 8.165 210.167 7.03833 210.167 5.695C210.167 4.35166 210.622 3.225 211.532 2.315C212.442 1.405 213.568 0.949997 214.912 0.949997C216.212 0.949997 217.317 1.405 218.227 2.315C219.137 3.225 219.592 4.35166 219.592 5.695C219.592 7.03833 219.137 8.165 218.227 9.075C217.317 9.985 216.212 10.44 214.912 10.44ZM218.552 15.185V51H211.142V15.185H218.552ZM242.125 44.37L252.265 15.185H260.13L246.48 51H237.64L224.055 15.185H231.985L242.125 44.37Z"
+              fill="white" />
+          </svg>
 
-        <div class="mt-8 flex flex-row justify-between">
-          <div class="flex flex-row">
-            <button
-              type="button"
-              class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
-              role="switch"
-              aria-checked="false"
-            >
-              <span class="sr-only">Use setting</span>
-              <span
-                aria-hidden="true"
-                class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-              ></span>
+        </div>
+        <div class="flex px-8 pb-8 pt-4 rounded-b-lg">
+          <div class="flex flex-col w-full gap-4">
+            <div>
+              <span class="text-sm text-gray-300 text-xs">Email</span>
+              <input class="bg-transparent border px-1.5 border-zinc-700 w-full rounded-md py-1.5 text-xs text-gray-300"
+                type="email" v-model="email">
+            </div>
+            <div>
+              <span class="text-sm text-gray-300 text-xs">Senha</span>
+              <input class="bg-transparent border px-1.5 border-zinc-700 w-full rounded-md py-1.5 text-xs text-gray-300"
+                type="password" v-model="password">
+            </div>
+            <button type="submit"
+              class="flex justify-center bg-gray-300 rounded-md text-sm py-2 mt-2 hover:bg-gray-200">
+              Entrar
             </button>
-            <p class="ml-4 text-gray-700">Lembrar-me</p>
-          </div>
-
-          <div>
-            <p class="cursor-pointer text-gray-700 font-bold">
-              Esqueceu a senha?
-            </p>
           </div>
         </div>
-
-        <div>
-          <button
-            class="bg-zinc-900 w-full py-1.5 px-3.5 mt-8 rounded-md shadow-md text-white hover:bg-zinc-800"
-            @click="submit()"
-          >
-            Entrar
-          </button>
-        </div>
-
-        <div class="mt-8">
-          <p class="cursor-pointer text-gray-700">
-            Não tem uma conta?
-            <span class="font-bold text-gray-700">Registre-se</span>
-          </p>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </template>
@@ -75,6 +36,7 @@
 <script>
 import axios from "axios";
 import Cookie from "js-cookie";
+
 export default {
   data() {
     return {
